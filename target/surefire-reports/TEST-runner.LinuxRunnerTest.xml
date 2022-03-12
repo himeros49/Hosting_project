@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="runner.LinuxRunnerTest" time="142.057" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_321\jre\bin"/>
+    <property name="java.vm.version" value="25.321-b07"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\MyFramework\com.hostingq11.jenkins"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\MyFramework\com.hostingq11.jenkins"/>
+    <property name="java.runtime.version" value="1.8.0_321-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\apache-maven-3.8.4\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_321\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_321/bin;C:\Program Files\Java\jdk1.8.0_321/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\apache-maven-3.8.4\bin;C:\Program Files\Java\jdk1.8.0_321\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="maven.conf" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\apache-maven-3.8.4/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\apache-maven-3.8.4\lib\jansi-native"/>
+    <property name="user.home" value="C:\Windows\system32\config\systemprofile"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="VARUN-RANJAN$"/>
+    <property name="java.class.path" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\apache-maven-3.8.4\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_321\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_321"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_321\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_321\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_321\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\varun\OneDrive - ZNet Technologies Private Limited\Varun Ranjan\Automation\apache-maven-3.8.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Buying Linux" name="Customer" time="142.057">
+    <error message="element not interactable
+  (Session info: chrome=98.0.4758.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;VARUN-RANJAN&apos;, ip: &apos;172.17.247.92&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Windows\TEMP\scoped_dir2...}, goog:chromeOptions: {debuggerAddress: localhost:58415}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 049801895541e805de5adc5855d065f5" type="org.openqa.selenium.ElementNotInteractableException">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=98.0.4758.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;VARUN-RANJAN&apos;, ip: &apos;172.17.247.92&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Windows\TEMP\scoped_dir2...}, goog:chromeOptions: {debuggerAddress: localhost:58415}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 049801895541e805de5adc5855d065f5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at features.Q11_hostinglinux.customer_login_into_Q11_Website(Q11_hostinglinux.java:74)
+	at ✽.Customer login into Q11 Website(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:5)
+</error>
+    <system-out>
+@BuyProductwithbank
+Scenario: Customer                                   # src/test/resources/QA11_hostinglinux.feature:4
+2022-03-04 17:27:27,365 [main] INFO  features.Q11_hostinglinux - Username Entered
+2022-03-04 17:27:33,635 [main] INFO  features.Q11_hostinglinux - Password Entered
+2022-03-04 17:27:33,784 [main] INFO  features.Q11_hostinglinux - login button clicked
+2022-03-04 17:27:33,785 [main] INFO  features.Q11_hostinglinux - Welcome to Q11 portal
+2022-03-04 17:27:33,785 [main] INFO  features.Q11_hostinglinux - try block 
+2022-03-04 17:28:34,031 [main] INFO  features.Q11_hostinglinux - Catch Block .....Please help me.......
+[Ljava.lang.StackTraceElement;@23a5818e
+2022-03-04 17:28:36,652 [main] INFO  features.Q11_hostinglinux - Page Refreshed
+  Given Customer login into Q11 Website              # features.Q11_hostinglinux.customer_login_into_Q11_Website()
+      org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=98.0.4758.102)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;VARUN-RANJAN&apos;, ip: &apos;172.17.247.92&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Windows\TEMP\scoped_dir2...}, goog:chromeOptions: {debuggerAddress: localhost:58415}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 049801895541e805de5adc5855d065f5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at features.Q11_hostinglinux.customer_login_into_Q11_Website(Q11_hostinglinux.java:74)
+	at âœ½.Customer login into Q11 Website(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:5)
+
+  Then Customer Choose Linux Hosting Gold Offer plan # features.Q11_hostinglinux.customer_choose_linux_hosting_gold_offer_plan()
+  When Customer open Monthly plan and add it to cart # features.Q11_hostinglinux.customer_open_monthly_plan_and_add_it_to_cart()
+  And Customer creates new account                   # features.Q11_hostinglinux.customer_creates_new_account()
+  Then Customer pay it by bank payment               # features.Q11_hostinglinux.customer_pay_it_by_bank_payment()
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 32271
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Mar 04, 2022 5:27:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+</testsuite>

@@ -1,0 +1,16 @@
+methods\Invoice.class
+methods\Invoice_partner.class
+methods\Switch_tab.class
+runner\LinuxRunnerTest.class
+methods\New_account_partners.class
+methods\Open_Q11_portal.class
+utilities\ReadConfig.class
+methods\Order_summary_page.class
+methods\After_account_creation.class
+methods\Choosing_hosting_custom_plan.class
+methods\Adding_partner.class
+methods\New_account.class
+methods\BaseClass.class
+methods\Payments.class
+features\Q11_hostinglinux.class
+methods\Order_Details_Page.class
