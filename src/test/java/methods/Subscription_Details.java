@@ -13,7 +13,7 @@ public class Subscription_Details extends BaseClass{
 	
 	public static void turn_off_renewable(WebDriver driver) throws Exception
 	{
-		WebElement Auto_renewal= driver.findElement(By.id("auto_renewal_action"));
+		WebElement Auto_renewal= driver.findElement(By.name("auto_renewal_action"));
 		
 		try {
 			
@@ -49,7 +49,7 @@ public class Subscription_Details extends BaseClass{
 	
 	public static void turn_on_renewable(WebDriver driver) throws Exception
 	{
-		WebElement Auto_renewal= driver.findElement(By.id("auto_renewal_action"));
+		WebElement Auto_renewal= driver.findElement(By.name("auto_renewal_action"));
 		
 		try {
 			

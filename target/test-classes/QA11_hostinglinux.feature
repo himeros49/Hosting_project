@@ -46,7 +46,7 @@ Feature: Hosting Buying Linux
     Then Dumbledore verifies the invoice
 
   @Adding_receipt_to_pay_invoice_paid_by_banking_gateway
-  Scenario: Buying Linux Hosting service banking Gateway
+  Scenario: Adding receipt to pay due purchase
     Given Justin login into Q11 Website
     Then Justin Choose Linux Hosting Gold Offer plan
     When Justin open Monthly plan and add it to cart
@@ -58,7 +58,7 @@ Feature: Hosting Buying Linux
     And Oliver verifies the invoice
 
   @Generate_Invoice_Renewal_with_autorenewal_off
-  Scenario: Buying Linux Hosting service paypal Gateway
+  Scenario: Generating Invoice for when AutoRenewal service is off
     Given Joseph login into Q11 Website
     Then Joseph Choose Linux Hosting Gold Offer plan
     When Joseph open Monthly plan add it to cart
@@ -68,9 +68,11 @@ Feature: Hosting Buying Linux
     Then Leo turns off Joseph auto renewal service off
     And Leo generates invoice
     Then Leo verifies the invoice
+    And Leo adds receipt
+    Then Leo again verifies the invoice
 
   @Generate_Invoice_Renewal_with_autorenewal_on
-  Scenario: Buying Linux Hosting service paypal Gateway
+  Scenario: Generating Invoice for when AutoRenewal service is on
     Given Robert login into Q11 Website
     Then Robert Choose Linux Hosting Gold Offer plan
     When Robert open Monthly plan add it to cart
@@ -80,9 +82,11 @@ Feature: Hosting Buying Linux
     Then Victor turns off Robert auto renewal service on
     And Victor generates invoice
     Then Victor verifies the invoice
+    And Victor adds receipt
+    Then Victor again verifies the invoice
 
   @create_addon
-  Scenario: Buying Linux Hosting service paypal Gateway
+  Scenario: Buying Addon Service after purchase
     Given Mario login into Q11 Website
     Then Mario Choose Linux Hosting Gold Offer plan
     When Mario open Monthly plan add it to cart
@@ -150,3 +154,44 @@ Feature: Hosting Buying Linux
     Then William added receipt which is paid by James
     Then William approves for the product
     And William verifies the invoice
+    
+    @Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel
+  Scenario: Generating Invoice for when AutoRenewal service is off
+    Given Logan login into Q11 partner portal
+    Then Logan Choose Linux Hosting Gold Offer plan
+    When Logan open Monthly plan add it to cart
+    And Logan creates new account
+    Then Logan pay it by paypal payment
+    And Jackson opens Joseph Profile
+    Then Jackson turns off Logan auto renewal service off
+    And Jackson generates invoice
+    Then Jackson verifies the invoice
+    And Jackson adds receipt
+    Then Jackson again verifies the invoice
+
+  @Generate_Invoice_Renewal_with_autorenewal_on_partnerpanel
+  Scenario: Generating Invoice for when AutoRenewal service is on
+    Given Luke login into Q11 partner portal
+    Then Luke Choose Linux Hosting Gold Offer plan
+    When Luke open Monthly plan add it to cart
+    And Luke creates new account
+    Then Luke pay it by paypal payment
+    And Isaac opens Robert Profile
+    Then Isaac turns off Luke auto renewal service on
+    And Isaac generates invoice
+    Then Isaac verifies the invoice
+    And Isaac adds receipt
+    Then Isaac again verifies the invoice
+
+  @create_addon_partnerpanel
+  Scenario: Buying Addon Service after purchase
+    Given Thomas login into Q11 partner portal
+    Then Thomas Choose Linux Hosting Gold Offer plan
+    When Thomas open Monthly plan add it to cart
+    And Thomas creates new account
+    Then Thomas pay it by paypal payment
+    And Charles opens Thomas Profile
+    Then Charles adds Addons to Thomas subscription plan
+    And Charles verifies generated Order
+    And Charles adds receipt 
+    Then Charles approves for the product

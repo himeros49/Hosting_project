@@ -255,7 +255,7 @@ public class New_account1 extends BaseClass {
 
 
 			WebElement userid = driver.findElement(By.id("regi_username"));
-			String username2=(username + randomnumber(4)).trim();
+			String username2=(username + randomnumber(5)).trim();
 
 			userid.sendKeys(username2);
 			System.out.println("Your userid " + username2);

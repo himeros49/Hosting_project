@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 14, 2022 11:43:27 am</span></a>
+<a href="#"><span class="badge badge-primary">Mar 14, 2022 05:59:01 pm</span></a>
 </li>
 </ul>
 </div>
@@ -84,7 +84,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@create_addon</a>
+<a class="dropdown-item" href="#">@create_addon_partnerpanel</a>
 </ul>
 </li>
 </ul>
@@ -97,7 +97,7 @@
           <div class="test-detail">
             <p class="name">Hosting Buying Linux</p>
             <p class="text-sm">
-              <span>11:43:29 am</span> / <span>34:55:908</span>
+              <span>17:59:03 pm</span> / <span>34:14:097</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -106,9 +106,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Hosting Buying Linux</h5>
-<span class='badge badge-success'>03.14.2022 11:43:29</span>
-<span class='badge badge-danger'>03.14.2022 11:48:25</span>
-<span class='badge badge-default'>34:55:908</span>
+<span class='badge badge-success'>03.14.2022 17:59:03</span>
+<span class='badge badge-danger'>03.14.2022 18:03:17</span>
+<span class='badge badge-default'>34:14:097</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -118,51 +118,42 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Buying Linux Hosting service paypal Gateway</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Buying Addon Service after purchase</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="features.QA11_hostinglinux.mario_login_into_q11_website()">
-                <span>Given Mario login into Q11 Website</span>
+              <div class="step pass-bg" title="features.QA11_hostinglinux.thomas_login_into_q11_partner_portal()">
+                <span>Given Thomas login into Q11 partner portal</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="features.QA11_hostinglinux.mario_choose_linux_hosting_gold_offer_plan()">
-                <span>Then Mario Choose Linux Hosting Gold Offer plan</span>
+              <div class="step pass-bg" title="features.QA11_hostinglinux.thomas_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Thomas Choose Linux Hosting Gold Offer plan</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="features.QA11_hostinglinux.mario_open_monthly_plan_add_it_to_cart()">
-                <span>When Mario open Monthly plan add it to cart</span>
+              <div class="step pass-bg" title="features.QA11_hostinglinux.thomas_open_monthly_plan_add_it_to_cart()">
+                <span>When Thomas open Monthly plan add it to cart</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="features.QA11_hostinglinux.mario_creates_new_account()">
-                <span>And Mario creates new account</span>
+              <div class="step pass-bg" title="features.QA11_hostinglinux.thomas_creates_new_account()">
+                <span>And Thomas creates new account</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="features.QA11_hostinglinux.mario_pay_it_by_paypal_payment()">
-                <span>Then Mario pay it by paypal payment</span>
+              <div class="step fail-bg" title="features.QA11_hostinglinux.thomas_pay_it_by_paypal_payment()">
+                <span>Then Thomas pay it by paypal payment</span>
       <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="features.QA11_hostinglinux.luigi_opens_mario_profile()">
-                <span>And Luigi opens Mario Profile</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="features.QA11_hostinglinux.luigi_adds_addons_to_mario_subscription_plan()">
-                <span>Then Luigi adds Addons to Mario subscription plan</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="btn btn-success btn-sm submit_btn" href="javascript:void(0);" id="selectproduct_98_74" onclick="select_this_plan(98,74);">...</a> is not clickable at point (1202, 324). Other element would receive the click: <div class="swal2-container swal2-center swal2-fade swal2-shown" style="overflow-y: auto;">...</div>
+        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=99.0.4844.51)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54674}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a4c8911a616c86de804d95d39efbe2ce
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60600}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d6ad84a9c1a70beac850b6e5af572e4e
+*** Element info: {Using=class name, value=paymentsuccess}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -174,27 +165,42 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at methods.Subscription_Details.create_addon(Subscription_Details.java:116)
-	at features.QA11_hostinglinux.luigi_adds_addons_to_mario_subscription_plan(QA11_hostinglinux.java:1706)
-	at ?.Luigi adds Addons to Mario subscription plan(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:92)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at methods.Payments.payment_with_paypal(Payments.java:143)
+	at features.QA11_hostinglinux.thomas_pay_it_by_paypal_payment(QA11_hostinglinux.java:4193)
+	at ?.Thomas pay it by paypal payment(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:192)
 </textarea>
       
       </div>
               </div>
-              <div class="step skip-bg" title="features.QA11_hostinglinux.luigi_verifies_the_invoice()">
-                <span>And Luigi verifies the invoice</span>
+              <div class="step skip-bg" title="features.QA11_hostinglinux.charles_opens_thomas_profile()">
+                <span>And Charles opens Thomas Profile</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="features.QA11_hostinglinux.luigi_generated_receipt()">
-                <span>And Luigi generated receipt</span>
+              <div class="step skip-bg" title="features.QA11_hostinglinux.charles_adds_addons_to_thomas_subscription_plan()">
+                <span>Then Charles adds Addons to Thomas subscription plan</span>
       <div>Step skipped
       </div>
               </div>
-              <div class="step skip-bg" title="features.QA11_hostinglinux.luigi_generated_the_invoice()">
-                <span>Then Luigi generated the invoice</span>
+              <div class="step skip-bg" title="features.QA11_hostinglinux.charles_verifies_generated_order()">
+                <span>And Charles verifies generated Order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux.charles_adds_receipt()">
+                <span>And Charles adds receipt</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux.charles_approves_for_the_product()">
+                <span>Then Charles approves for the product</span>
       <div>Step skipped
       </div>
               </div>
@@ -226,12 +232,12 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="name">org.openqa.selenium.WebDriverException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<h4>org.openqa.selenium.WebDriverException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -245,11 +251,11 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>11:47:46 am</td>
+<td>18:02:07 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='9'>Then Luigi adds Addons to Mario subscription plan</a>
+<a href="#" class="linked" test-id='1' id='7'>Then Thomas pay it by paypal payment</a>
 <div class="">
-<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service paypal Gateway.Then Luigi adds Addons to Mario subscription plan</span>
+<span class="badge badge-default">Hosting Buying Linux.Buying Addon Service after purchase.Then Thomas pay it by paypal payment</span>
 </div>
 </td>
 </tr>
@@ -278,12 +284,12 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@create_addon</p>
+<p class="name">@create_addon_partnerpanel</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@create_addon</h4>
+<h4>@create_addon_partnerpanel</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -297,11 +303,11 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>11:43:29 am</td>
+<td>17:59:03 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Buying Linux Hosting service paypal Gateway</a>
+<a href="#" class="linked" test-id='1' id='2'>Buying Addon Service after purchase</a>
 <div class="">
-<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service paypal Gateway</span>
+<span class="badge badge-default">Hosting Buying Linux.Buying Addon Service after purchase</span>
 </div>
 </td>
 </tr>
@@ -322,13 +328,13 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 14, 2022 11:43:27 am</h3>
+<h3>Mar 14, 2022 05:59:01 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 14, 2022 11:48:25 am</h3>
+<h3>Mar 14, 2022 06:03:17 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -399,10 +405,10 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='60%'><b>6</b> steps passed</small></div>
+<div><small data-tooltip='40%'><b>4</b> steps passed</small></div>
 <div>
 <small data-tooltip='10%'><b>1</b> steps failed,
-<b>3</b> skipped, <b data-tooltip='%'>0</b> others
+<b>5</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -418,7 +424,7 @@ Session ID: a4c8911a616c86de804d95d39efbe2ce
 </div></div>
 <script>
 var timeline = {
-"Hosting Buying Linux":295.908
+"Hosting Buying Linux":254.097
 };
 </script>
 <div class="row">
@@ -428,7 +434,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@create_addon</td>
+<td>@create_addon_partnerpanel</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -455,10 +461,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 6,
+passGrandChild: 4,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 3,
+skipGrandChild: 5,
 infoGrandChild: 0,
 eventsCount: 5,
 };
