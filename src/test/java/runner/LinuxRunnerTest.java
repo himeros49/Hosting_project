@@ -19,8 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 				
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		
-		,tags =  "@BuyProductwithbank_partnerpanel or @BuyProductwithpaypal_partnerpanel or @Adding_Credit_Limit_In_Customer_Account_partnerpanel "
-				+ "or @Adding_Credit_Balance_in_Customer_Account_partnerpanel or @Adding_receipt_to_pay_invoice_paid_by_banking_gateway_partnerpanel"
+		,tags = "@create_addon"
 		
 		)
 

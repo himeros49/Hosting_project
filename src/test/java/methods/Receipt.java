@@ -39,7 +39,7 @@ public class Receipt extends BaseClass{
 		Thread.sleep(1000);
 		
 		
-		driver.findElement(By.id("amount")).sendKeys("5");
+		driver.findElement(By.id("amount")).sendKeys("500");
 		Thread.sleep(1000);
 		
 		

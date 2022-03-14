@@ -47,7 +47,7 @@ public static void creating_new_account_for_partner(WebDriver driver, String she
 		
 		String generateStringInAlphanumeric = RandomStringUtils.randomAlphanumeric(5);
 
-		String generateStringInNumber = RandomStringUtils.randomNumeric(4);
+		String generateStringInNumber = RandomStringUtils.randomNumeric(5);
 
 		//	String generateStringInASCII =RandomStringUtils.randomAscii(7);
 

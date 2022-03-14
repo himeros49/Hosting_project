@@ -96,6 +96,8 @@ public class Order_Details_Page extends BaseClass {
 		FileOutputStream fos = new FileOutputStream(source);
 		wb.write(fos);
 		wb.close();
+		fi.close();
+		fos.close();
 
 		Thread.sleep(5000);
 

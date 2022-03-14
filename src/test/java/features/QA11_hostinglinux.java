@@ -38,6 +38,7 @@ import methods.Order_Details_Page;
 import methods.Order_summary_page;
 import methods.Payments;
 import methods.Receipt;
+import methods.Subscription_Details;
 import methods.Switch_tab;
 import java.util.ArrayList;
 import org.openqa.selenium.JavascriptExecutor;
@@ -1341,9 +1342,479 @@ public class QA11_hostinglinux {
 	
 	
 	
+	///Invoice Generation with AutoRenewal Off
+	
+	
+	@Given("Joseph login into Q11 Website")
+	public void joseph_login_into_q11_website() throws Exception {
+		
+		driver = Open_Q11_portal.open_Q11_Website();
+
+		try
+		{
+
+		logger.info("try block ");
+		//Settings DropDown
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span")));
+
+		WebElement setting = driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span"));
+		setting.click();					
+		logger.info("Settings Openend");
+
+		}
+		catch(Exception x)
+		{
+			logger.info("Catch Block .....Please help me.......");
+			System.out.println(x.getStackTrace());
+			driver.navigate().refresh();
+			logger.info("Page Refreshed");
+			driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+			Thread.sleep(30000);
+			
+			//Settings DropDown
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
+			WebElement setting = driver.findElement(By.xpath("//span[text()='Settings']"));
+			setting.click();	
+			logger.info("Settings Openend");
+			
+		}
+
+
+		Thread.sleep(2000);
+		Actions ac = new Actions(driver);
+
+		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Offers')])[2]")));
+		ac.moveToElement(driver.findElement(By.xpath("//span[contains(.,'Basic Configuration')]"))).click().perform();
+		Thread.sleep(2000);
+		
+		
+	}
+
+	
+	@Then("Joseph Choose Linux Hosting Gold Offer plan")
+	public void joseph_choose_linux_hosting_gold_offer_plan() throws Exception {
+		
+		//Opening monthly Plan link
+		driver = Choosing_hosting_custom_plan.select_hosting_plan(driver, "monthly");
+		
+	}
+	
+	
+	@When("Joseph open Monthly plan add it to cart")
+	public void joseph_open_monthly_plan_add_it_to_cart() throws Exception {
+		
+		//Domain
+				Adding_domain.entering_the_domin_from_admin_panel(driver);
+
+				Order_summary_page.capture_data_from_order_summary_page(driver,"Hosting_paypal");
+
+				//Add to cart button
+				driver.findElement(By.id("submit")).click();
+				Thread.sleep(5000);
+
+				
+				driver.findElement(By.id("next_without_login")).click();
+
+
+				//create an Account
+				driver.findElement(By.id("sign-up-sec")).click();
+				Thread.sleep(3000);
+	}
+	
+	
+	@When("Joseph creates new account")
+	public void joseph_creates_new_account() throws Exception {
+		
+//		Calling Method for CREATIION OF NEW CUSTOMER ACCOUNT
+		New_account1.creating_new_account_from_admin_panel(driver, "Hosting_paypal",3,10);
+
+		///After Account Creation
+		System.out.println("After account creation");
+		Thread.sleep(7000);
+
+
+		After_account_creation.capture_data_after_account_creation_from_admin_panel(driver, "Hosting_paypal");
+
+		
+	}
+	
+	
+	@Then("Joseph pay it by paypal payment")
+	public void joseph_pay_it_by_paypal_payment() throws Exception {
+		Payments.payment_with_paypal(driver, "Hosting_paypal");	
+
+		driver = Switch_tab.switch_previous_tab2(driver);	
+		
+	}
+	
+	
+	@Then("Leo opens Joseph Profile")
+	public void leo_opens_joseph_profile() throws Exception {
+		
+		try {
+			logger.info("In try block wait for billing ");
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Accounts'])[1]")));
+	
+
+		driver.findElement(By.xpath("(//span[text()='Accounts'])[1]")).click();
+
+			}
+		catch(Exception x)
+		{
+			logger.info("In catch block wait for billing ");
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Accounts")));
+		
+
+			driver.findElement(By.partialLinkText("Accounts")).click();
+			
+		}
+		
+		Thread.sleep(5000);
+		Actions ac = new Actions(driver);
 
 
 
+
+		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='Customers'])[1]")));
+		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='List'])[1]"))).click().perform();
+
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[3]/a[1]")).click();
+		Thread.sleep(7000);
+		
+	}
+	
+	
+	@Then("Leo turns off Joseph auto renewal service off")
+	public void leo_turns_off_joseph_auto_renewal_service_off() throws Exception {
+		
+		//Subscription Section present in the left panel
+		driver.findElement(By.xpath("(//span[text()='Subscriptions'])[3]")).click();
+		Thread.sleep(3000);
+		
+		//Sub Subscription
+		driver.findElement(By.xpath("(//span[text()='Subscriptions'])[4]")).click();
+		Thread.sleep(3000);
+		
+		//choose subscription details 
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
+		
+		
+		//AutoRenewal off
+		Subscription_Details.turn_off_renewable(driver);
+		
+		
+	}
+	
+	
+	@Then("Leo generates invoice")
+	public void leo_generates_invoice() throws Exception {
+		
+		//Subscription
+		driver.findElement(By.xpath("(//span[text()='Subscriptions'])[4]")).click();
+		Thread.sleep(3000);
+		
+		//Select check box 
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/thead[1]/tr[1]/th[1]/label[1]/span[1]")).click();
+		
+		
+		driver.findElement(By.xpath("(//span[text()='Invoices'])[3]")).click();
+		Thread.sleep(3000);
+	    
+		
+		
+	}
+	
+	
+	
+	@Then("Leo verifies the invoice")
+	public void leo_verifies_the_invoice() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
+
+	
+	
+	
+	
+	
+	
+	//Creating Addon
+	
+	@Given("Mario login into Q11 Website")
+	public void mario_login_into_q11_website() throws Exception {
+		
+		driver = Open_Q11_portal.open_Q11_Website();
+
+		try
+		{
+
+		logger.info("try block ");
+		//Settings DropDown
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span")));
+
+		WebElement setting = driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span"));
+		setting.click();					
+		logger.info("Settings Openend");
+
+		}
+		catch(Exception x)
+		{
+			logger.info("Catch Block .....Please help me.......");
+			System.out.println(x.getStackTrace());
+			driver.navigate().refresh();
+			logger.info("Page Refreshed");
+			driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+			Thread.sleep(30000);
+			
+			//Settings DropDown
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
+			WebElement setting = driver.findElement(By.xpath("//span[text()='Settings']"));
+			setting.click();	
+			logger.info("Settings Openend");
+			
+		}
+
+
+		Thread.sleep(2000);
+		Actions ac = new Actions(driver);
+
+		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Offers')])[2]")));
+		ac.moveToElement(driver.findElement(By.xpath("//span[contains(.,'Basic Configuration')]"))).click().perform();
+		Thread.sleep(2000);
+		
+		
+	}
+
+	
+	@Then("Mario Choose Linux Hosting Gold Offer plan")
+	public void mario_choose_linux_hosting_gold_offer_plan() throws Exception {
+		
+		//Opening monthly Plan link
+		driver = Choosing_hosting_custom_plan.select_hosting_plan(driver, "monthly");
+		
+	}
+	
+	
+	@When("Mario open Monthly plan add it to cart")
+	public void mario_open_monthly_plan_add_it_to_cart() throws Exception {
+
+		//Choosing Domain
+		driver = Adding_domain.entering_the_domin_from_admin_panel_without_addon(driver);
+
+		//Add to cart button
+		driver.findElement(By.id("submit")).click();
+		Thread.sleep(5000);
+		
+		
+		driver.findElement(By.id("next_without_login")).click();
+
+
+		//create an Account
+		driver.findElement(By.id("sign-up-sec")).click();
+		Thread.sleep(3000);
+		logger.info("Going to Create New Account");
+	}
+	
+	
+	@And("Mario creates new account")
+	public void mario_creates_new_account() throws Exception {
+
+		//Calling Method for CREATIION OF NEW CUSTOMER ACCOUNT
+		New_account1.creating_new_account_from_admin_panel(driver, "Hosting_paypal",3,10);
+
+		///After Account Creation
+		System.out.println("After account creation");
+		Thread.sleep(7000);
+
+	
+	}
+	
+	
+	@Then("Mario pay it by paypal payment")
+	public void mario_pay_it_by_paypal_payment() throws Exception {
+		
+		Payments.payment_with_paypal(driver, "Hosting_paypal");
+		driver = Switch_tab.switch_previous_tab2(driver);	
+		
+	}
+	
+	
+	@And("Luigi opens Mario Profile")
+	public void luigi_opens_mario_profile() throws Exception {
+		
+		try {
+			logger.info("In try block wait for billing ");
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Accounts'])[1]")));
+	
+
+		driver.findElement(By.xpath("(//span[text()='Accounts'])[1]")).click();
+
+			}
+		catch(Exception x)
+		{
+			logger.info("In catch block wait for billing ");
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Accounts")));
+		
+
+			driver.findElement(By.partialLinkText("Accounts")).click();
+			
+		}
+		
+		Thread.sleep(5000);
+		Actions ac = new Actions(driver);
+
+
+
+
+		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='Customers'])[1]")));
+		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='List'])[1]"))).click().perform();
+
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[3]/a[1]")).click();
+		Thread.sleep(7000);
+
+	
+	}
+	
+	
+	@Then("Luigi adds Addons to Mario subscription plan")
+	public void luigi_adds_addons_to_mario_subscription_plan() throws Exception {
+		
+		//Subscription Section present in the left panel
+		driver.findElement(By.xpath("(//span[text()='Subscriptions'])[3]")).click();
+		Thread.sleep(3000);
+				
+		//Sub Subscription
+		driver.findElement(By.xpath("(//span[text()='Subscriptions'])[4]")).click();
+		Thread.sleep(3000);
+				
+		//choose subscription details 
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
+					
+		//Created Addon
+		Subscription_Details.create_addon(driver);
+		
+	}
+	
+	
+	@Then("Luigi verifies generated Order")
+	public void luigi_verifies_generated_order() throws Exception {
+		
+		//Billing section
+		try {
+			driver.findElement(By.xpath("(//span[text()='Billing'])[4]")).click();
+			Thread.sleep(3000);
+		}
+		catch(Exception x)
+		{
+			driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(3)>a>span:nth-of-type(2)")).click();
+			Thread.sleep(3000);
+		}
+		
+		//orders 
+		driver.findElement(By.xpath("(//span[text()='Orders'])[3]")).click();
+		Thread.sleep(7000);
+		
+		//order status
+//		String order_status= driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[6]/span[1]")).getText();
+//		System.out.println(order_status);
+ 		
+
+	}
+	
+	
+	@And("Luigi adds receipt")
+	public void luigi_adds_receipt() throws Exception {
+		
+		try {
+		//Receipt
+		driver.findElement(By.xpath("(//span[text()='Receipts'])[3]")).click();
+		logger.info("try block receipt section opened");
+		Thread.sleep(7000);
+		
+		}
+		catch(Exception x)
+		{
+			//Receipt
+			driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(4)>a>span")).click();
+			logger.info("catch block receipt section opened");
+			Thread.sleep(7000);
+			
+		}
+		
+		
+		//Important links 
+		driver.findElement(By.xpath("//span[text()='Important Links']")).click();
+		Thread.sleep(3000);
+		
+		//Add Receipt
+		driver.findElement(By.xpath("//span[text()='Add Receipt']")).click();
+		Thread.sleep(7000);
+		
+		
+		Receipt.add_receipt(driver);
+	
+	}
+	
+	
+	@Then("Luigi approves for the product")
+	public void luigi_approves_for_the_product() throws Exception {
+		
+		//orders 
+		driver.findElement(By.xpath("(//span[text()='Orders'])[3]")).click();
+		Thread.sleep(5000);
+		
+		//go to 1st row order
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		
+		//Select checkbox
+		try {
+			
+		driver.findElement(By.xpath("(//table[contains(@class,'table table-bordered')]/following::table)[2]/thead[1]/tr[1]/th[1]/label[1]/span[1]")).click();
+		Thread.sleep(3000);
+		}
+		catch(Exception x)
+		{
+			driver.findElement(By.cssSelector("form#update_order>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div>div>div>table>thead>tr>th>label>span")).click();
+			Thread.sleep(3000);
+		}
+		
+		
+		//Approve button
+		try {
+			driver.findElement(By.xpath("(//button[contains(@class,'btn btn-brand')])[1]")).click();
+			Thread.sleep(5000);
+		}
+		catch(Exception x)
+		{
+			driver.findElement(By.xpath("//button[text()='Approve']")).click();
+			Thread.sleep(5000);
+		}
+		
+		driver.findElement(By.xpath("//button[text()='Ok']")).click();
+		Thread.sleep(7000);
+		
+		driver.findElement(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]")).click();
+		
+		Switch_tab.switch_next_tab(driver);
+		
+		String paid_date = driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[2]/td[2]")).getText();
+		System.out.println(paid_date);
+		
+	}
 
 
 	
@@ -1751,8 +2222,8 @@ public class QA11_hostinglinux {
 	
 	//Customer adding Lending Credit and again Order via Credit Limit  (Sheet Name = "Hosting_CreditLimit_partner")
 	
-	@Given("Susan register with Q11 Website")
-	public void susan_register_with_q11_website() throws Exception {
+	@Given("Susan register with Q11 partner portal")
+	public void susan_register_with_q11_partner_portal() throws Exception {
 		
 		//Launching Browser
 		driver = Open_Q11_portal.open_Q11_Website();
@@ -1888,12 +2359,6 @@ public class QA11_hostinglinux {
 
 		driver.findElement(By.id("next_without_login")).click();
 		Thread.sleep(3000);
-
-
-		//create an Account
-		driver.findElement(By.id("sign-up-sec")).click();
-		Thread.sleep(3000);
-		logger.info("Going to Create New Account");
 		
 	}
 	
@@ -1996,8 +2461,14 @@ public class QA11_hostinglinux {
 
 
 		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Orders')])[1]")));
+		try {
 		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='List'])[5]"))).click().perform();
 
+		}
+		catch(Exception x)
+		{
+			ac.moveToElement(driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(4)>div>ul>li>div>ul>li>a>span"))).click().perform();	
+		}
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
 		Thread.sleep(7000);
@@ -2020,7 +2491,9 @@ public class QA11_hostinglinux {
 
 		Thread.sleep(5000);
 		
-		Invoice_partner.capture_invoice_ordered_with_paypal(driver, "Hosting_CreditLimit_partner");
+		
+		//Invoice must be unpaid
+		Invoice_partner.capture_invoice_ordered_with_bank(driver, "Hosting_CreditLimit_partner");
 
 
 		Thread.sleep(7000);
@@ -2036,8 +2509,8 @@ public class QA11_hostinglinux {
 	//HARRY is adding adding credit Balance and ordering Product via Credit Balance(Sheet Name = "Hosting_CreditBalance_partner")
 	
 	
-	@Given("Harry register with Q11 Website")
-	public void harry_register_with_q11_website() throws Exception {
+	@Given("Harry register with Q11 partner portal")
+	public void harry_register_with_q11_partner_portal() throws Exception {
 		//Launching Browser
 		driver = Open_Q11_portal.open_Q11_Website();
 		Thread.sleep(5000);
@@ -2048,7 +2521,7 @@ public class QA11_hostinglinux {
 	public void harry_open_his_account_and_add_credit_balance() throws Exception {
 		
 		//Customer,ie.Harry creating account 
-				Adding_customer.add_customer(driver, "Hosting_CreditBalance");
+				Adding_customer.add_customer(driver, "Hosting_CreditBalance_partner");
 			
 				
 				Thread.sleep(7000);
@@ -2169,13 +2642,6 @@ public class QA11_hostinglinux {
 
 				driver.findElement(By.id("next_without_login")).click();
 				Thread.sleep(3000);
-
-
-				//create an Account
-				driver.findElement(By.id("sign-up-sec")).click();
-				Thread.sleep(3000);
-				logger.info("Going to Create New Account");
-		
 		
 	}
 	
@@ -2190,7 +2656,7 @@ public class QA11_hostinglinux {
 		File source = new File(xlpath);
 		FileInputStream fi = new FileInputStream(source);
 		XSSFWorkbook wb = new XSSFWorkbook(fi);
-		XSSFSheet sheet = wb.getSheet("Hosting_CreditLimit_partner");
+		XSSFSheet sheet = wb.getSheet("Hosting_CreditBalance_partner");
 
 
 		String Username = sheet.getRow(3).getCell(10).getStringCellValue();
@@ -2225,21 +2691,52 @@ public class QA11_hostinglinux {
 		
 		driver.findElement(By.id("make_payment")).click();
 		
+		try {
 		Thread.sleep(5000);
-		
-		try 
-		{
-			
-		driver.findElement(By.id("adjust_with_credit")).click();
-		
+		driver.findElement(By.xpath("//input[@value='Next']")).click();
 		}
 		catch(Exception x)
 		{
-			driver.findElement(By.name("adjust_with_credit")).click();
+			Thread.sleep(5000);
+			driver.findElement(By.cssSelector("form#buildserver>div>div>div:nth-of-type(3)>div>div>input:nth-of-type(2)")).click();
 		}
-		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//button[contains(@class,'confirm btn')]")).click();
+		
+		try
+		{	
+			Thread.sleep(7000);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.presenceOfElementLocated((By.className("bay-bill-balance"))));
+			WebElement success = driver.findElement(By.className("bay-bill-balance"));
+			if(success.isDisplayed())
+			{
+				System.out.println(success.getText());
+			}
+			else
+			{
+				System.out.println("Timeout");
+			}
+
+		}
+		catch(Exception x)
+		{
+			Thread.sleep(5000);
+			driver.findElement(By.cssSelector("form#buildserver>div>div>div:nth-of-type(3)>div>div>input:nth-of-type(2)")).click();
+			Thread.sleep(7000);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.presenceOfElementLocated((By.cssSelector("div#div_message>div"))));
+			WebElement success =driver.findElement(By.cssSelector("div#div_message>div"));
+			if(success.isDisplayed())
+			{
+				System.out.println(success.getText());
+			}
+			else
+			{
+				System.out.println("Timeout");
+			}
+		}
 		
 		Thread.sleep(7000);
 		
@@ -2275,11 +2772,15 @@ public class QA11_hostinglinux {
 		Thread.sleep(5000);
 		Actions ac = new Actions(driver);
 
-
-
-
 		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Orders')])[1]")));
+		try {
 		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='List'])[5]"))).click().perform();
+
+		}
+		catch(Exception x)
+		{
+			ac.moveToElement(driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(4)>div>ul>li>div>ul>li>a>span"))).click().perform();	
+		}
 
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
@@ -2318,8 +2819,8 @@ public class QA11_hostinglinux {
 	////James is buying Product via Bank(sheet_name = Hosting_bank_partner)
 	///William is adding Receipt
 	
-	@Given("James login into Q11 Website")
-	public void james_login_into_q11_website() throws Exception {
+	@Given("James login into Q11 partner portal")
+	public void james_login_into_q11_partner_portal() throws Exception {
 		driver = Open_Q11_portal.open_Q11_Partnerpanel();
 		logger.info("Welcome to Q11 Partner portal");
 		Thread.sleep(15000);
@@ -2529,12 +3030,17 @@ logger.info("Mode of Payment Bank");
 		
 		Thread.sleep(5000);
 		Actions ac = new Actions(driver);
-
-
-
-
+		
+		
 		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Orders')])[1]")));
-		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'List')])[6]"))).click().perform();
+		try {
+		ac.moveToElement(driver.findElement(By.xpath("(//span[text()='List'])[5]"))).click().perform();
+
+		}
+		catch(Exception x)
+		{
+			ac.moveToElement(driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(4)>div>ul>li>div>ul>li>a>span"))).click().perform();	
+		}
 
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();

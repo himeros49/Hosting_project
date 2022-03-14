@@ -36,9 +36,9 @@ public class Invoice_partner extends BaseClass {
 		sheet.getRow(54).createCell(1).setCellValue(Invoice_Date);
 		System.out.println(Invoice_Date);
 
-		String Invoice_Due_Date= driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[1]/td[2]")).getText();
-		sheet.getRow(55).createCell(1).setCellValue(Invoice_Due_Date);
-		System.out.println(Invoice_Due_Date);
+//		String Invoice_Due_Date= driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[1]/td[2]")).getText();
+//		sheet.getRow(55).createCell(1).setCellValue(Invoice_Due_Date);
+//		System.out.println(Invoice_Due_Date);
 
 		String Invoice_Unpaid= driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[2]/td[1]/b[1]")).getText();
 		sheet.getRow(53).createCell(2).setCellValue(Invoice_Unpaid);
