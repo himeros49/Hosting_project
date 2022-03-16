@@ -95,8 +95,33 @@ Feature: Hosting Buying Linux
     And Luigi opens Mario Profile
     Then Luigi adds Addons to Mario subscription plan
     And Luigi verifies generated Order
-    And Luigi adds receipt 
+    And Luigi adds receipt
     Then Luigi approves for the product
+
+  @3rd_module_settings
+  Scenario: Buying Linux Hosting service paypal Gateway with 3rd Module setting
+    Given Jasper login into Q11 Website
+    Then Jasper Choose Linux Hosting Gold Offer plan
+    When Jasper open Monthly plan add it to cart
+    And Jasper creates new account
+    Then Jasper pay it by paypal payment
+    And Casper view Billing
+    Then Casper Approve for product
+    And Casper clicks on invoice
+    Then Casper verifies the invoice
+    
+    @SubContact
+    Scenario: Customer is adding SubContact and Ordering
+    Given Louis login into Q11 Website
+    Then Louis register his account
+    And Louis creates SubContact 
+    Then Louis Choose Linux Hosting Gold Offer plan
+    When Louis open Monthly plan add it to cart
+    And Louis login with the SubContact account
+    Then Louis pay it by paypal
+    And Brian view Billing
+    Then Brian verifies the invoice
+    
 
   ######## PARTNER PANEL ###########
   @BuyProductwithbank_partnerpanel
@@ -123,7 +148,7 @@ Feature: Hosting Buying Linux
 
   @Adding_Credit_Limit_In_Customer_Account_partnerpanel
   Scenario: Customer lending money from partner panel
-    Given Susan register with Q11 partner portal
+    Given Susan login into Q11 partner portal
     Then Susan open his account and add credit limit
     Then Susan Choose Linux Hosting Gold Offer plan
     When Susan open Monthly plan add it to cart
@@ -134,7 +159,7 @@ Feature: Hosting Buying Linux
 
   @Adding_Credit_Balance_in_Customer_Account_partnerpanel
   Scenario: Customer Adding Credit into Account from partner panel
-    Given Harry register with Q11 partner portal
+    Given Harry login into Q11 partner portal
     Then Harry open his account and add credit balance
     Then Harry Choose Linux Hosting Gold Offer plan
     When Harry open Monthly plan add it to cart
@@ -154,8 +179,8 @@ Feature: Hosting Buying Linux
     Then William added receipt which is paid by James
     Then William approves for the product
     And William verifies the invoice
-    
-    @Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel
+
+  @Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel
   Scenario: Generating Invoice for when AutoRenewal service is off
     Given Logan login into Q11 partner portal
     Then Logan Choose Linux Hosting Gold Offer plan
@@ -193,5 +218,30 @@ Feature: Hosting Buying Linux
     And Charles opens Thomas Profile
     Then Charles adds Addons to Thomas subscription plan
     And Charles verifies generated Order
-    And Charles adds receipt 
+    And Charles adds receipt
     Then Charles approves for the product
+    
+    ##TODO
+    #@3rd_module_settings_partnerpanel
+    #Scenario: Buying Linux Hosting service paypal Gateway with 3rd Module setting
+    #Given Calvin login into Q11 Website
+    #Then Calvin Choose Linux Hosting Gold Offer plan
+    #When Calvin open Monthly plan add it to cart
+    #And Calvin creates new account
+    #Then Calvin pay it by paypal payment
+    #And Max view Billing
+    #Then Max Approve for product
+    #And Max clicks on invoice
+    #Then Max verifies the invoice
+    
+    @SubContact_partnerpanel
+    Scenario: Customer is adding SubContact and Ordering
+    Given Kane login into Q11 partner portal
+    Then Kane register his account
+    And Kane creates SubContact 
+    Then Kane Choose Linux Hosting Gold Offer plan
+    When Kane open Monthly plan add it to cart
+    And Kane login with the SubContact account
+    Then Kane pay it by paypal
+    And Wade view Billing
+    Then Wade verifies the invoice

@@ -218,6 +218,137 @@ public class ReadConfig {
 	}
 
 /*********************** END ************************************/
+	
+	
+	
+/********************** FOR SUBCONTACT  ************************/
+	
+	//ScUsername
+	public String get_scusername()
+	{ 
+	String Username =pro.getProperty("scusername");
+	return Username;
+	}
+
+	//Firstname
+	public String get_scFirst_name()
+	{ 
+		String firstname =pro.getProperty("scfirst_name");
+		return firstname;
+	}
+	
+	//Lastname
+	public String get_scLast_name()
+	{
+		String lastname =pro.getProperty("sclast_name");
+		return lastname;
+	}
+	
+	//Email
+	public String get_scemail()
+	{ 
+		String Email =pro.getProperty("scemail");
+		return Email;
+	}
+		
+	//Company name
+	public String get_scCompany_name()
+	{
+		String companyname =pro.getProperty("sccompany_name");
+		return companyname;
+	}
+	
+	//Address 
+	public String get_scAddress1()
+	{
+		String Address1 =pro.getProperty("scaddress1");
+		return Address1;
+	}
+	
+	//Country
+	public String get_scCountry_name()
+	{ 
+		String Country =pro.getProperty("sccountry");
+		return Country;
+	}
+	
+	//State
+	public String get_scState_name()
+	{ 
+		String State =pro.getProperty("scstate");
+		return State;
+	}
+	
+	//city
+	public String get_scCity_name()
+	{ 
+		String City =pro.getProperty("sccity");
+		return City;
+	}
+	
+	//Mobile Number
+	public String get_scMobile_number()
+		{ 
+			String mobile =pro.getProperty("scmobile_number");
+			return mobile;
+		}
+	
+	//Phone Number
+	public String get_scPhone_number()
+	{ 
+		String phone =pro.getProperty("scphone_number");
+		return phone;
+	}
+	
+	//Pincode
+	public String get_scPincode_number()
+	{ 
+		String Pincode =pro.getProperty("scpincode");
+		return Pincode;
+	}
+
+/*********************** END ************************************/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 //////////////////////////////////////////////////////////////
 		public String getUsername2()

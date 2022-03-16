@@ -10,7 +10,7 @@ public class Switch_tab extends BaseClass {
 	
 	
 	
-	public static void switch_next_tab(WebDriver driver)
+	public static WebDriver switch_next_tab(WebDriver driver)
 
 	{
 		
@@ -37,6 +37,7 @@ public class Switch_tab extends BaseClass {
 				if(!window.equalsIgnoreCase(parentId))
 				{
 					driver.switchTo().window(window);
+					return driver;
 				}
 			}
 
@@ -45,6 +46,8 @@ public class Switch_tab extends BaseClass {
 		{
 			x.printStackTrace();
 		}
+		
+		return driver;
 	}
 	
 	
@@ -89,7 +92,7 @@ public class Switch_tab extends BaseClass {
 	public static WebDriver switch_next_tab2 (WebDriver driver)
 
 	{
-		((JavascriptExecutor)driver).executeScript("window.open()");
+		((JavascriptExecutor)driver).executeScript("window.open()");//opens new tab
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         return driver.switchTo().window(tabs.get(1));
 		
@@ -98,7 +101,7 @@ public class Switch_tab extends BaseClass {
 	public static WebDriver switch_previous_tab2 (WebDriver driver)
 
 	{
-		((JavascriptExecutor)driver).executeScript("window.open()");
+		//((JavascriptExecutor)driver).executeScript("window.open()");
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         return driver.switchTo().window(tabs.get(0));
 		

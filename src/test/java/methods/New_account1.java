@@ -73,7 +73,7 @@ public class New_account1 extends BaseClass {
 			userid.sendKeys(username2);
 			System.out.println("Your userid " + username2);
 			
-			sheet.getRow(row).getCell(set_cell).setCellValue(username2);//1
+			sheet.getRow(row).createCell(set_cell).setCellValue(username2);//1
 			System.out.println(username2);
 			
 

@@ -168,6 +168,8 @@ public class Open_Q11_portal extends BaseClass{
 					logger.info("Page refreshed");
 					
 					driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+					
+					
 					driver.findElement(By.id("login_username")).sendKeys(valid_partner_username);
 					
 					logger.info("Username Entered");

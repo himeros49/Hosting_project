@@ -24,16 +24,17 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import features.QA11_hostinglinux;
+import features.QA11_hostinglinux_partnerPanel;
 import utilities.ReadConfig;
 
 public class BaseClass {
 	
 	
+	
 	//Location Of Excel Sheet
 	public static String xlpath = System.getProperty("user.dir") + "/src/main/resources/Q11-Hosting.xlsx";
 	
-	public static Logger logger = LogManager.getLogger(QA11_hostinglinux.class);
+	public static Logger logger = LogManager.getLogger(QA11_hostinglinux_partnerPanel.class);
 	
 	
 	

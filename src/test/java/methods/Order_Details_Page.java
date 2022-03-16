@@ -122,6 +122,9 @@ public class Order_Details_Page extends BaseClass {
 		driver.findElement(By.xpath("//button[@type='button'][contains(.,'Ok')]")).click();
 		Thread.sleep(20000);
 		
+		WebDriverWait wait = new WebDriverWait(driver, 100);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]")));
+		
 	}
 
 	
