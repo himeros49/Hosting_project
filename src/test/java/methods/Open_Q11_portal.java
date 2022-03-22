@@ -167,7 +167,9 @@ public class Open_Q11_portal extends BaseClass{
 					
 					logger.info("Page refreshed");
 					
-					driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+					driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+					
+					Thread.sleep(3000);
 					
 					
 					driver.findElement(By.id("login_username")).sendKeys(valid_partner_username);

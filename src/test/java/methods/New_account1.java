@@ -11,6 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -139,17 +140,28 @@ public class New_account1 extends BaseClass {
 		DropDownState.selectByVisibleText(state_name);
 		sheet.getRow(row+7).createCell(set_cell).setCellValue(state_name);//8
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 		}
 		catch (Exception x)
 		{
 			logger.info("Catch block");
 			//Select country By value
+			
+			
 			WebElement country1=driver.findElement(By.name("countryid"));
 
+//			
+//			DropDownCountry_alien.selectByVisibleText("Iceland");
+		
+			//cast driver object to JavaScriptExecutor
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].value='Iceland'", country1);
+			Thread.sleep(5000);
+
+			
+			
 			Select DropDownCountry_alien= new Select(country1);
-			DropDownCountry_alien.selectByVisibleText("Iceland");
 			Thread.sleep(5000);
 			DropDownCountry_alien.selectByVisibleText(country_name);
 			Thread.sleep(5000);
@@ -158,7 +170,7 @@ public class New_account1 extends BaseClass {
 
 			Select DropDownState= new Select(state);
 
-			DropDownState.selectByVisibleText(state_name);
+			DropDownState.selectByIndex(2);
 			sheet.getRow(row+7).createCell(set_cell).setCellValue(state_name);//8
 	
 			
@@ -260,7 +272,7 @@ public class New_account1 extends BaseClass {
 			userid.sendKeys(username2);
 			System.out.println("Your userid " + username2);
 			
-			sheet.getRow(row).getCell(set_cell).setCellValue(username2);//1
+			sheet.getRow(row).createCell(set_cell).setCellValue(username2);//1
 			System.out.println(username2);
 			
 

@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -120,7 +121,7 @@ public class Order_Details_Page extends BaseClass {
 
 		//click OK button
 		driver.findElement(By.xpath("//button[@type='button'][contains(.,'Ok')]")).click();
-		Thread.sleep(20000);
+		Thread.sleep(10000);
 		
 		WebDriverWait wait = new WebDriverWait(driver, 100);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]")));
@@ -173,7 +174,6 @@ public class Order_Details_Page extends BaseClass {
 		//		        
 		String order_invoice = driver.findElement(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]")).getText();
 		sheet.getRow(49).createCell(1).setCellValue(order_invoice);
-		ChangeForegroundColourForAutomation(name_of_the_sheet, 49, 1);
 		System.out.println(order_invoice);
 
 
@@ -195,8 +195,14 @@ public class Order_Details_Page extends BaseClass {
 		try
 		{
 			logger.info("Leeme try");
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]")));
+		
 		WebElement go_to_invoice = driver.findElement(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]"));
-		go_to_invoice.click();
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", go_to_invoice);
+		
 		Thread.sleep(5000);
 		
 		}
@@ -204,9 +210,15 @@ public class Order_Details_Page extends BaseClass {
 		{
 			logger.info("catch block ........help me!!!!!!");
 			driver.navigate().refresh();
-			Thread.sleep(10000);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("form#update_order>div>div>div:nth-of-type(2)>div>div:nth-of-type(2)>h3>a")));
+			
 			WebElement go_to_invoice = driver.findElement(By.cssSelector("form#update_order>div>div>div:nth-of-type(2)>div>div:nth-of-type(2)>h3>a"));
-			go_to_invoice.click();
+			
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].click();", go_to_invoice);
+			
 			Thread.sleep(5000);	
 		}
 		

@@ -3,9 +3,8 @@ package features;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -17,7 +16,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,9 +24,13 @@ import methods.Adding_Credit_Balance;
 import methods.Adding_customer;
 import methods.Adding_domain;
 import methods.After_account_creation;
+import methods.Cancel_order;
 import methods.Choosing_hosting_custom_plan;
+import methods.Custom_invoice;
 import methods.Invoice1;
 import methods.Invoice2;
+import methods.Ledger;
+import methods.Logs_and_Emails;
 import methods.New_account1;
 import methods.Open_Q11_portal;
 import methods.Order_Details_Page;
@@ -40,6 +42,9 @@ import methods.Subcontact;
 import methods.Subscription_Details;
 import methods.Switch_tab;
 import methods.ThirdModule_settings;
+import methods_for_manageSubcription_admin.Open_Qa11_adminportal_manage_subscription;
+import methods_for_member_panel.Open_Qa11_adminportal;
+
 
 public class QA11_hostinglinux_adminPanel {
 	
@@ -285,17 +290,71 @@ public class QA11_hostinglinux_adminPanel {
 
 		Thread.sleep(7000);
 
-		driver.quit();
+		driver.close();
+		
+		Thread.sleep(3000);
+		
+		Switch_tab.switch_previous_tab2(driver);	
+		
+		
 	}
 
 
+	@Then("Arthur opens Ronald profile")
+	public void arthur_opens_ronald_profile() throws Exception {
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/following::table/tbody[1]/tr[1]/td[1]/a[1]")).click();
+		
+		Thread.sleep(5000);
+		
+		Switch_tab.switch_next_tab(driver);		
+	    
+	}
+
+
+	@Then("Arthur verifies the log and emails")
+	public void arthur_verifies_the_log_and_emails() throws Exception {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Supports']")));
+		
+		//Open Support Section
+		driver.findElement(By.xpath("//span[text()='Supports']")).click();
+		Thread.sleep(2000);
+
+		//click on logs
+		driver.findElement(By.xpath("(//span[text()='Logs'])[2]")).click();
+		Thread.sleep(3000);
+		
+		
+		//capture data of logs
+		Logs_and_Emails.capture_details_of_logs(driver, "Hosting_bank", 7);
+		Thread.sleep(5000);
+		
+		//clicks on email
+		driver.findElement(By.xpath("//span[text()='Email Logs']")).click();
+		
+		Thread.sleep(3000);
+		
+		////capture data of emails
+		Logs_and_Emails.capture_details_of_emails(driver, "Hosting_bank",4);
+	
+		driver.quit();
+		
+		
+	}
 	
 	
-	//Buying Product via Paypal(sheet_name = Hosting_paypal)
+	
+	
+	
+	
+	//Buying Product via Paypal(sheet_name = "Hosting_manage_subscription")
 
 	@Given("Ginny login into Q11 Website")
 	public void ginny_login_into_Q11_website() throws Exception {
-
 
 		driver = Open_Q11_portal.open_Q11_Website();
 
@@ -327,16 +386,18 @@ public class QA11_hostinglinux_adminPanel {
 			WebElement setting = driver.findElement(By.xpath("//span[text()='Settings']"));
 			setting.click();	
 			logger.info("Settings Openend");
-
 		}
-
-
+		
 		Thread.sleep(2000);
 		Actions ac = new Actions(driver);
 
 		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Offers')])[2]")));
-		ac.moveToElement(driver.findElement(By.xpath("//span[contains(.,'Basic Configuration')]"))).click().perform();
+		ac.pause(20);
 		Thread.sleep(2000);
+		ac.moveToElement(driver.findElement(By.xpath("(//a[@href='/adminp/products-type/product-type-list']//span)[2]"))).click().perform();
+		Thread.sleep(2000);
+
+		
 
 	}
 
@@ -477,7 +538,8 @@ public class QA11_hostinglinux_adminPanel {
 
 	
 	
-
+	//Buying Product via credit limit(sheet_name = Hosting_CreditLimit)
+	
 	//Customer adding Lending Credit and again Order via Credit Limit  (Sheet Name = "Hosting_CreditLimit")
 
 	@Given("Fred register with Q11 Website")
@@ -785,7 +847,9 @@ public class QA11_hostinglinux_adminPanel {
 
 		Thread.sleep(7000);
 
-		try {
+		try 
+		{
+			
 			//selecting customer
 			driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[3]/a[1]")).click();
 
@@ -794,8 +858,13 @@ public class QA11_hostinglinux_adminPanel {
 		{
 
 			driver.navigate().refresh();
-			Thread.sleep(10000);
-			driver.findElement(By.xpath("(//table[@class='table table-bordered']//a)[1]")).click();
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//table[@class='table table-bordered']//a)[1]")));
+			
+			WebElement table =  driver.findElement(By.xpath("(//table[@class='table table-bordered']//a)[1]"));
+			
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", table);
 
 		}
 
@@ -813,6 +882,9 @@ public class QA11_hostinglinux_adminPanel {
 		Thread.sleep(5000);
 
 		Adding_Credit_Balance.add_credit_balance(driver);
+		Thread.sleep(5000);
+		
+		Ledger.capture_details_of_legder_before_payment(driver, "Hosting_CreditBalance");
 		Thread.sleep(5000);
 
 
@@ -1079,14 +1151,50 @@ public class QA11_hostinglinux_adminPanel {
 
 		Thread.sleep(7000);
 
-		driver.quit();
+		driver.close();
+		
+		driver = Switch_tab.switch_previous_tab2(driver);
+		
+		Thread.sleep(5000);
 
 
 	}
 
+	
+	@Then("Dumbledore checks the remaining credit balance")
+	public void dumbledore_checks_the_remaining_credit_balance() throws Exception {
+	    
+		
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/following::table/tbody[1]/tr[1]/td[1]/a[1]")).click();
+		
+		Thread.sleep(5000);
+		
+		Switch_tab.switch_next_tab(driver);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[text()='Billing'])[4]")));
+		
+		//Open Billing Section
+		driver.findElement(By.xpath("(//span[text()='Billing'])[4]")).click();
+		Thread.sleep(2000);
 
+		//click on ledger
+		driver.findElement(By.xpath("//span[text()='Ledger']")).click();
+		Thread.sleep(3000);
+		
+		
+		Ledger.capture_details_of_legder_after_payment(driver, "Hosting_CreditBalance");
+		Thread.sleep(5000);
+		
+		
+		driver.quit();
+		
+		
+	}
 	
 
+
+	
 	
 	////Justin is buying Product via Bank(sheet_name = Hosting_bank)
 	///Oliver is adding Receipt
@@ -1616,9 +1724,9 @@ public class QA11_hostinglinux_adminPanel {
 		{
 			//Receipt
 			WebDriverWait wait = new WebDriverWait(driver, 50);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(5)>div>ul>li:nth-of-type(3)>a>span")));
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(3)>a>span")));
 
-			driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(5)>div>ul>li:nth-of-type(3)>a>span")).click();
+			driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(3)>a>span")).click();
 			logger.info("catch block receipt section opened");
 			Thread.sleep(7000);
 
@@ -1762,7 +1870,8 @@ public class QA11_hostinglinux_adminPanel {
 
 	@When("Robert creates new account")
 	public void robert_creates_new_account() throws Exception {
-		//			Calling Method for CREATIION OF NEW CUSTOMER ACCOUNT
+		
+		//Calling Method for CREATIION OF NEW CUSTOMER ACCOUNT
 		New_account1.creating_new_account_from_admin_panel(driver, "Hosting_paypal",3,10);
 
 		///After Account Creation
@@ -1887,7 +1996,11 @@ public class QA11_hostinglinux_adminPanel {
 
 		//billing section present in left panel
 		try {
-			driver.findElement(By.xpath("(//span[text()='Billing'])[4]")).click();
+			
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[text()='Receipts'])[3]")));
+			
+			driver.findElement(By.xpath("(//span[text()='Receipts'])[3]")).click();
 			Thread.sleep(3000);
 		}
 		catch(Exception x)
@@ -1897,7 +2010,7 @@ public class QA11_hostinglinux_adminPanel {
 
 			WebDriverWait wait = new WebDriverWait(driver, 50);
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>a>span:nth-of-type(2)")));
-
+			
 			driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>a>span:nth-of-type(2)")).click();
 			Thread.sleep(3000);
 		}
@@ -1912,13 +2025,22 @@ public class QA11_hostinglinux_adminPanel {
 		System.out.println(status);
 
 		driver.navigate().back();
+		
+		Thread.sleep(5000);
+		
+		driver.navigate().refresh();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[text()='Receipts'])[3]"))); 
 
 	}
 
 
 	@Then("Victor adds receipt")
 	public void victor_adds_receipt() throws Exception {
-		try {
+		
+		try
+		{
 			//Receipt
 			driver.findElement(By.xpath("(//span[text()='Receipts'])[3]")).click();
 			logger.info("try block receipt section opened");
@@ -1928,7 +2050,13 @@ public class QA11_hostinglinux_adminPanel {
 		catch(Exception x)
 		{
 			//Receipt
-			driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(4)>a>span")).click();
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(4)>a>span")));
+			WebElement receipt = driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(4)>a>span"));
+			
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", receipt);
+			
 			logger.info("catch block receipt section opened");
 			Thread.sleep(7000);
 
@@ -1984,7 +2112,8 @@ public class QA11_hostinglinux_adminPanel {
 	
 	
 
-	//Creating Addon (Excel Sheet = "Hosting_paypal" )
+	//Create Addon (Excel sheet = "Hosting_createAddon")
+
 
 	@Given("Mario login into Q11 Website")
 	public void mario_login_into_q11_website() throws Exception {
@@ -2068,7 +2197,7 @@ public class QA11_hostinglinux_adminPanel {
 	public void mario_creates_new_account() throws Exception {
 
 		//Calling Method for CREATIION OF NEW CUSTOMER ACCOUNT
-		New_account1.creating_new_account_from_admin_panel(driver, "Hosting_paypal",3,10);
+		New_account1.creating_new_account_from_admin_panel(driver, "Hosting_createAddon",3,10);
 
 		///After Account Creation
 		System.out.println("After account creation");
@@ -2081,7 +2210,7 @@ public class QA11_hostinglinux_adminPanel {
 	@Then("Mario pay it by paypal payment")
 	public void mario_pay_it_by_paypal_payment() throws Exception {
 
-		Payments.payment_with_paypal(driver, "Hosting_paypal");
+		Payments.payment_with_paypal(driver, "Hosting_createAddon");
 		
 		driver.close();
 		
@@ -2218,6 +2347,12 @@ public class QA11_hostinglinux_adminPanel {
 	@Then("Luigi approves for the product")
 	public void luigi_approves_for_the_product() throws Exception {
 
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//span[text()='Orders'])[3]")));
+		
+		
+		
+		
 		//orders 
 		driver.findElement(By.xpath("(//span[text()='Orders'])[3]")).click();
 		Thread.sleep(5000);
@@ -2227,34 +2362,38 @@ public class QA11_hostinglinux_adminPanel {
 		Thread.sleep(5000);
 
 
-		//Select checkbox
-		try {
-
-			driver.findElement(By.xpath("(//table[contains(@class,'table table-bordered')]/following::table)[2]/thead[1]/tr[1]/th[1]/label[1]/span[1]")).click();
-			Thread.sleep(3000);
-		}
-		catch(Exception x)
-		{
-			driver.findElement(By.cssSelector("form#update_order>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div>div>div>table>thead>tr>th>label>span")).click();
-			Thread.sleep(3000);
-		}
-
-
-		//Approve button
-		try {
-			driver.findElement(By.xpath("(//button[contains(@class,'btn btn-brand')])[1]")).click();
-			Thread.sleep(5000);
-		}
-		catch(Exception x)
-		{
-			driver.findElement(By.xpath("//button[text()='Approve']")).click();
-			Thread.sleep(5000);
-		}
-
-		driver.findElement(By.xpath("//button[text()='Ok']")).click();
-		Thread.sleep(7000);
-
-		driver.findElement(By.xpath("//h3[@class='kt-portlet__head-title']//a[1]")).click();
+//		//Select checkbox
+//		try {
+//
+//			driver.findElement(By.xpath("(//table[contains(@class,'table table-bordered')]/following::table)[2]/thead[1]/tr[1]/th[1]/label[1]/span[1]")).click();
+//			Thread.sleep(3000);
+//		}
+//		catch(Exception x)
+//		{
+//			driver.findElement(By.cssSelector("form#update_order>div>div>div:nth-of-type(2)>div:nth-of-type(2)>div>div>div>table>thead>tr>th>label>span")).click();
+//			Thread.sleep(3000);
+//		}
+//
+//
+//		//Approve button
+//		try {
+//			driver.findElement(By.xpath("(//button[contains(@class,'btn btn-brand')])[1]")).click();
+//			Thread.sleep(5000);
+//		}
+//		catch(Exception x)
+//		{
+//			driver.findElement(By.xpath("//button[text()='Approve']")).click();
+//			Thread.sleep(5000);
+//		}
+//
+//		driver.findElement(By.xpath("//button[text()='Ok']")).click();
+		
+		
+		Order_Details_Page.approve_order(driver);
+		
+		Order_Details_Page.go_to_invoice(driver);
+		
+		Thread.sleep(5000);
 
 		Switch_tab.switch_next_tab(driver);
 
@@ -2268,7 +2407,8 @@ public class QA11_hostinglinux_adminPanel {
 	
 	
 	
-
+	//3rd Module Settings(Excel sheet = "Hosting_3rdModule_admin")
+	
 
 	//3rd Module Settings (Excel Sheet = "Hosting_3rdModule_admin")
 
@@ -2459,6 +2599,7 @@ public class QA11_hostinglinux_adminPanel {
 	
 	
 
+	
 	//Order for SubContact (Excel_sheet = "Hosting_Subcontact")
 
 	@Given("Louis login into Q11 Website")
@@ -2587,6 +2728,7 @@ public class QA11_hostinglinux_adminPanel {
 		XSSFWorkbook wb = new XSSFWorkbook(fi);
 		XSSFSheet sheet = wb.getSheet("Hosting_Subcontact");
 
+		
 
 		String Username = sheet.getRow(16).getCell(10).getStringCellValue();
 		String password = sheet.getRow(17).getCell(10).getStringCellValue();
@@ -2601,7 +2743,24 @@ public class QA11_hostinglinux_adminPanel {
 
 		driver.findElement(By.name("log_in")).click();
 		Thread.sleep(3000);
+		
+		List<WebElement> terms = driver.findElements(By.xpath("//div[text()='Username or password you entered is incorrect.']"));
+        if(terms.size() != 0)
+        {
+        	driver.findElement(By.name("user")).sendKeys(Username);
+    		Thread.sleep(5000);
 
+    		driver.findElement(By.id("login_form_password")).sendKeys(password);
+    		Thread.sleep(5000);
+
+
+    		driver.findElement(By.name("log_in")).click();
+    		Thread.sleep(7000);
+            
+        }
+		
+		
+		
 		FileOutputStream fos = new FileOutputStream(source);
 		wb.write(fos);
 		wb.close();
@@ -2617,10 +2776,13 @@ public class QA11_hostinglinux_adminPanel {
 		After_account_creation.capture_data_after_account_creation_from_admin_panel(driver, "Hosting_Subcontact");
 		
 		Payments.payment_with_paypal(driver, "Hosting_Subcontact");	
-
-		driver = Switch_tab.switch_previous_tab2(driver);
 		
 		driver.close();
+		
+		Thread.sleep(3000);
+		
+		driver = Switch_tab.switch_previous_tab2(driver);
+		
 	}
 
 
@@ -2673,7 +2835,7 @@ public class QA11_hostinglinux_adminPanel {
 		
 		Thread.sleep(5000);
 
-		Invoice1.capture_invoice_ordered_with_paypal(driver, "Hosting_Subcontact");
+		Invoice1.capture_invoice_ordered_with_credit_balance(driver, "Hosting_Subcontact");
 
 		Thread.sleep(7000);
 		//Closes both Tabs 
@@ -2685,10 +2847,448 @@ public class QA11_hostinglinux_adminPanel {
 	
 	
 	
+	//Cancel_Whole_order (Excel sheet = "Hosting_CancelledOrder")
+	
+
+	@Given("Shawn login into Q11 Website")
+	public void shawn_login_into_q11_website() throws Exception {
+		driver = Open_Q11_portal.open_Q11_Website();
+
+		try
+		{
+
+			logger.info("try block ");
+			//Settings DropDown
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span")));
+
+			WebElement setting = driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span"));
+			setting.click();					
+			logger.info("Settings Openend");
+
+		}
+		catch(Exception x)
+		{
+			logger.info("Catch Block .....Please help me.......");
+			System.out.println(x.getStackTrace());
+			driver.navigate().refresh();
+			logger.info("Page Refreshed");
+			driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+			Thread.sleep(30000);
+
+			//Settings DropDown
+			WebDriverWait wait = new WebDriverWait(driver, 50);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
+			WebElement setting = driver.findElement(By.xpath("//span[text()='Settings']"));
+			setting.click();	
+			logger.info("Settings Openend");
+
+		}
+
+
+		Thread.sleep(2000);
+		Actions ac = new Actions(driver);
+
+		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Offers')])[2]")));
+		ac.moveToElement(driver.findElement(By.xpath("//span[contains(.,'Basic Configuration')]"))).click().perform();
+		Thread.sleep(2000);
+		
+		
+	}
+
+	
+	@Then("Shawn Choose Linux Hosting Gold Offer plan")
+	public void shawn_choose_linux_hosting_gold_offer_plan() throws Exception {
+		
+		//Opening monthly Plan link
+		driver = Choosing_hosting_custom_plan.select_hosting_plan_admin_panel(driver, "monthly");
+		
+	}
+	
+	
+	@When("Shawn open Monthly plan and add it to cart")
+	public void shawn_open_monthly_plan_and_add_it_to_cart() throws Exception {
+		//Choosing Domain
+				driver = Adding_domain.entering_the_domin_from_admin_panel(driver);
+				
+				Order_summary_page.capture_data_from_order_summary_page(driver,"Hosting_CancelledOrder");
+
+
+				//Add to cart button
+				driver.findElement(By.id("submit")).click();
+				Thread.sleep(5000);
+
+
+				driver.findElement(By.id("next_without_login")).click();
+
+
+				//create an Account
+				driver.findElement(By.id("sign-up-sec")).click();
+				Thread.sleep(3000);
+		
+		
+	}
+	
+	
+	@And("Shawn creates new account")
+	public void shawn_creates_new_account() throws Exception {
+		//Calling Method for NEW ACCOUNT CREATION
+				New_account1.creating_new_account_from_admin_panel(driver,"Hosting_CancelledOrder",3,10);
+
+				///After Account Creation
+				logger.info("After Account Creation");
+				Thread.sleep(7000);
+
+				logger.info("All Details after creating an account is captured");
+
+				Thread.sleep(5000);
+	}
+	
+	
+	@Then("Shawn pay it by paypal payment")
+	public void shawn_pay_it_by_paypal_payment() throws Exception {
+	    
+		Payments.payment_with_paypal(driver, "Hosting_CancelledOrder");	
+		
+		driver.close();
+
+		driver = Switch_tab.switch_previous_tab2(driver);
+		
+	}
+	
+	
+	@And("Lucca view order")
+	public void lucca_view_order() throws Exception {
+		try {
+			logger.info("In try block wait for billing ");
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Billing')])[1]")));
+
+
+			driver.findElement(By.xpath("(//span[contains(.,'Billing')])[1]")).click();
+
+		}
+		catch(Exception x)
+		{
+			logger.info("In catch block wait for billing ");
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(4)>a>span")));
+
+
+			driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(4)>a>span")).click();
+
+		}
+
+		Thread.sleep(5000);
+		Actions ac = new Actions(driver);
+
+
+
+
+		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Orders')])[1]")));
+		ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'List')])[6]"))).click().perform();
+
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
+		Thread.sleep(7000);
+
+		Order_Details_Page.capture_data_of_order_details_page_before_approval(driver, "Hosting_CancelledOrder");
+	}
+	
+	
+	@Then("Lucca cancels the whole order")
+	public void lucca_cancels_the_whole_order() throws Exception {
+	   
+		
+		Cancel_order.cancel_my_order(driver);
+		
+		try {
+		WebDriverWait wait = new WebDriverWait(driver, 90);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[contains(@class,'table table-bordered')]/following::table/tbody[1]/tr[1]/td[1]/a[1]")));
+		
+		WebElement user=driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/following::table/tbody[1]/tr[1]/td[1]/a[1]"));
+//		Actions ac = new Actions(driver);
+//		ac.moveToElement(user);
+//		ac.click().perform();
+		
+		//Creating the JavascriptExecutor interface object by Type casting		
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        //Perform Click on LOGIN button using JavascriptExecutor		
+        js.executeScript("arguments[0].click();", user);
+		
+		
+		
+		}
+		catch(Exception x)
+		{
+			WebDriverWait wait = new WebDriverWait(driver, 90);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[contains(@class,'table table-bordered')]//a[1]")));
+			
+			WebElement user = driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]//a[1]"));
+			//Creating the JavascriptExecutor interface object by Type casting		
+	        JavascriptExecutor js = (JavascriptExecutor)driver;
+	        //Perform Click on LOGIN button using JavascriptExecutor		
+	        js.executeScript("arguments[0].click();", user);
+			
+		}
+		
+		Switch_tab.switch_next_tab(driver);
+		Thread.sleep(5000);
+		
+		
+			//Billing section present in left panel
+				try {
+					driver.findElement(By.xpath("(//span[text()='Billing'])[4]")).click();
+					Thread.sleep(3000);
+				}
+				catch(Exception x)
+				{
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+
+					WebDriverWait wait2 = new WebDriverWait(driver, 50);
+					wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>a>span:nth-of-type(2)")));
+
+					driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>a>span:nth-of-type(2)")).click();
+					Thread.sleep(3000);
+				}
+
+				driver.findElement(By.xpath("(//span[text()='Invoices'])[3]")).click();
+				Thread.sleep(5000);
+
+				driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[2]/a[1]")).click();
+				Thread.sleep(10000);
+		
+		
+	}
+	
+	
+	@And("Lucca verifies the invoice")
+	public void lucca_verifies_the_invoice() throws Exception {
+		
+		String status = driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[2]/td[1]/b[1]")).getText();
+		System.out.println(status);
+		
+		Invoice1.capture_invoice_ordered_with_bank(driver, "Hosting_CancelledOrder");
+
+		driver.quit();
+	}
 	
 	
 	
 	
+	
+	
+	//Generating Custom Invoice (Excel Sheet = "Hosting_CustomeInvoice")
+
+		@Given("Francis login into Q11 Website")
+		public void francis_login_into_q11_website() throws Exception {
+			driver = Open_Q11_portal.open_Q11_Website();
+
+			try
+			{
+
+				logger.info("try block ");
+				//Settings DropDown
+				WebDriverWait wait = new WebDriverWait(driver, 50);
+				wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span")));
+
+				WebElement setting = driver.findElement(By.cssSelector("div#kt_header_menu>ul>li:nth-of-type(8)>a>span"));
+				setting.click();					
+				logger.info("Settings Openend");
+
+			}
+			catch(Exception x)
+			{
+				logger.info("Catch Block .....Please help me.......");
+				System.out.println(x.getStackTrace());
+				driver.navigate().refresh();
+				logger.info("Page Refreshed");
+				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+				Thread.sleep(30000);
+
+				//Settings DropDown
+				WebDriverWait wait = new WebDriverWait(driver, 50);
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Settings']")));
+				WebElement setting = driver.findElement(By.xpath("//span[text()='Settings']"));
+				setting.click();	
+				logger.info("Settings Openend");
+
+			}
+
+
+			Thread.sleep(2000);
+			Actions ac = new Actions(driver);
+
+			ac.moveToElement(driver.findElement(By.xpath("(//span[contains(.,'Offers')])[2]")));
+			ac.moveToElement(driver.findElement(By.xpath("//span[contains(.,'Basic Configuration')]"))).click().perform();
+			Thread.sleep(2000);
+		}
+
+		
+		@Then("Francis Choose Linux Hosting Gold Offer plan")
+		public void francis_choose_linux_hosting_gold_offer_plan() throws Exception {
+			//Opening monthly Plan link
+			driver = Choosing_hosting_custom_plan.select_hosting_plan_admin_panel(driver, "monthly");
+		
+		}
+		
+		
+		@When("Francis open Monthly plan and add it to cart")
+		public void francis_open_monthly_plan_and_add_it_to_cart() throws Exception {
+			
+			//Choosing Domain
+			driver = Adding_domain.entering_the_domin_from_admin_panel_without_addon(driver);
+
+			//Add to cart button
+			driver.findElement(By.id("submit")).click();
+			Thread.sleep(5000);
+
+
+			driver.findElement(By.id("next_without_login")).click();
+
+
+			//create an Account
+			driver.findElement(By.id("sign-up-sec")).click();
+			Thread.sleep(3000);
+		
+		}
+		
+		
+		@When("Francis creates new account")
+		public void francis_creates_new_account() throws Exception {
+			//Calling Method for NEW ACCOUNT CREATION
+			New_account1.creating_new_account_from_admin_panel(driver,"Hosting_CustomeInvoice",3,10);
+
+			///After Account Creation
+			logger.info("After Account Creation");
+//			Thread.sleep(7000);
+//
+//			//After_account_creation.capture_data_after_account_creation_from_admin_panel(driver, "Hosting_CustomeInvoice");
+//
+//			logger.info("All Details after creating an account is captured");
+
+			Thread.sleep(5000);
+		    
+			
+		}
+		
+		
+		@Then("Francis pay it by paypal payment")
+		public void francis_pay_it_by_paypal_payment() throws Exception {
+			Payments.payment_with_paypal(driver, "Hosting_CustomeInvoice");	
+			
+			driver.close();
+
+			driver = Switch_tab.switch_previous_tab2(driver);
+		}
+		
+		
+		@And("Hank opens Francis Profile")
+		public void hank_opens_francis_profile() throws Exception {
+			
+			try {
+				logger.info("In try block wait for Accounts ");
+				WebDriverWait wait = new WebDriverWait(driver, 30);
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Accounts'])[1]")));
+
+
+				driver.findElement(By.xpath("(//span[text()='Accounts'])[1]")).click();
+
+			}
+			catch(Exception x)
+			{
+				logger.info("In catch block wait for billing ");
+				WebDriverWait wait = new WebDriverWait(driver, 30);
+				wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Accounts")));
+
+
+				driver.findElement(By.partialLinkText("Accounts")).click();
+
+			}
+
+			Thread.sleep(5000);
+			Actions ac = new Actions(driver);
+
+
+
+
+			ac.moveToElement(driver.findElement(By.xpath("(//span[text()='Customers'])[1]")));
+			ac.moveToElement(driver.findElement(By.xpath("(//span[text()='List'])[1]"))).click().perform();
+
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//table[contains(@class,'table table-bordered')]/tbody[1]/tr[1]/td[3]/a[1]")).click();
+			Thread.sleep(7000);
+		    
+			
+		}
+		
+		
+		@Then("Hank Generates custom invoice")
+		public void hank_generates_custom_invoice() throws Exception {
+			
+			//billing section present in left panel
+			try {
+				driver.findElement(By.xpath("(//span[text()='Billing'])[4]")).click();
+				Thread.sleep(3000);
+			}
+			catch(Exception x)
+			{
+				driver.navigate().refresh();
+				Thread.sleep(5000);
+
+				WebDriverWait wait = new WebDriverWait(driver, 50);
+				wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>a>span:nth-of-type(2)")));
+
+				driver.findElement(By.cssSelector("div#kt_aside_menu>ul>li:nth-of-type(4)>a>span:nth-of-type(2)")).click();
+				Thread.sleep(3000);
+			}
+
+			driver.findElement(By.xpath("(//span[text()='Invoices'])[3]")).click();
+			Thread.sleep(5000);
+		    
+			driver.findElement(By.xpath("//span[text()='Important Links']")).click();
+			Thread.sleep(5000);
+			
+			driver.findElement(By.xpath("//span[text()='Create Custom Invoice ']")).click();
+			WebDriverWait wait = new WebDriverWait(driver, 90);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("invoice_date")));
+			
+			
+		}
+
+		
+		@And("Hank verifies the invoice")
+		public void hank_verifies_the_invoice() throws Exception {
+			
+			Custom_invoice.fill_generate_custom_invoice_for_admin_panel(driver);
+			
+			//driver.get("https://manage.qa11.dotbricks.net/adminp/invoices/generate-custom-invoice/VVhENVVkWW85MEU3L1ROZHdDVFhBc2xic01DSjlRei9Wb2F5Y2ZLQ2xlOD0=");
+			
+			Thread.sleep(5000);
+			
+			Custom_invoice.capture_data_of_custom_invoice_admin_panel(driver, "Hosting_CustomeInvoice");
+			
+			Thread.sleep(5000);
+			
+			driver.quit();
+			
+		}
+
+		
+	
+	
+	
+		
+		@Given("is it working")
+		public void is_it_working() throws Exception {
+//			driver = Open_Q11_portal.open_Q11_Website();
+//			Reload_WebPage.reload_reload(driver);
+			System.out.println("test");
+			
+			
+			
+		}
 	
 	
 	

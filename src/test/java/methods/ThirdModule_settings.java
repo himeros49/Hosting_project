@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ThirdModule_settings {
+public class ThirdModule_settings extends BaseClass{
 	
 	
 	public static WebDriver change_to_third_module(WebDriver driver,String plan) throws Exception
@@ -67,12 +67,17 @@ public class ThirdModule_settings {
 		driver.findElement(By.id("module_setting_btn")).click();
 		
 		
-		try {
-		WebDriverWait wait2 = new WebDriverWait(driver, 50);
+		try 
+		{
+			logger.info("I am in try block waiting for 3rd module to be changed");
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
 		wait2.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class='alert-text'])[3]")));
+		
 		}
 		catch(Exception x)
 		{
+			logger.info("I am in catch block ");
+			logger.info("I think it ain't goin' to be change");
 			WebDriverWait wait2 = new WebDriverWait(driver, 50);
 			wait2.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div#alert-msg-flash-success>div:nth-of-type(2)")));
 		}
@@ -80,7 +85,6 @@ public class ThirdModule_settings {
 		Thread.sleep(5000);
 		
 	}
-		
 		
 
 		//Open Offer Link
@@ -167,6 +171,14 @@ public class ThirdModule_settings {
 				driver.get(Decennial);
 				
 				}
+		
+		
+		open_link : 
+		
+		
+		
+			
+		
 		
 		return driver;
 		

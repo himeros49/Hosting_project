@@ -42,23 +42,27 @@ public class BaseClass {
 	//Creating Object Of ReadConfig class(present in utilities Section)
 	public static ReadConfig readconfig = new ReadConfig();
 	
-	static String BaseUrl = readconfig.openURL();
+	protected static String BaseUrl = readconfig.openURL();
 
-	static String valid_admin_username= readconfig.getadmin_username();
+	protected static String valid_admin_username= readconfig.getadmin_username();
 
-	static String valid_admin_password= readconfig.getadmin_password();
+	protected static String valid_admin_password= readconfig.getadmin_password();
 	
 	
 	
-	static String BaseUrl_partner = readconfig.openpartnerURL();
+	protected static String BaseUrl_partner = readconfig.openpartnerURL();
 
-	static String valid_partner_username= readconfig.getpartner_username();
+	protected static String valid_partner_username= readconfig.getpartner_username();
 
-	static String valid_partner_password= readconfig.getpartner_password();
+	protected static String valid_partner_password= readconfig.getpartner_password();
 	
 	
 	
-	static String BaseUrl_member = readconfig.openmemberURL();
+	public static String BaseUrl_member = readconfig.openmemberURL();
+	
+	public static String BaseUrl_member_partner = readconfig.openmember_partnerURL();
+	
+	public static String BaseUrl_market = readconfig.openmarketURL();
 	
 	
 	/**************************************** METHODS *******************************************/

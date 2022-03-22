@@ -1,0 +1,3430 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mar 18, 2022 02:51:56 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Generate_Invoice_Renewal_with_autorenewal_on_partnerpanel</a><a class="dropdown-item" href="#">@Cancel_Whole_order_partnerpanel</a><a class="dropdown-item" href="#">@BuyProductwithbank</a><a class="dropdown-item" href="#">@test</a><a class="dropdown-item" href="#">@BuyProductwithpaypal</a><a class="dropdown-item" href="#">@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger</a><a class="dropdown-item" href="#">@Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel</a><a class="dropdown-item" href="#">@SubContact_partnerpanel</a><a class="dropdown-item" href="#">@3rd_module_settings</a><a class="dropdown-item" href="#">@Adding_Credit_Limit_In_Customer_Account</a><a class="dropdown-item" href="#">@Adding_Credit_Limit_In_Customer_Account_partnerpanel</a><a class="dropdown-item" href="#">@Cancel_Whole_order</a><a class="dropdown-item" href="#">@Custom_invoice</a><a class="dropdown-item" href="#">@Generate_Invoice_Renewal_with_autorenewal_off</a><a class="dropdown-item" href="#">@Generate_Invoice_Renewal_with_autorenewal_on</a><a class="dropdown-item" href="#">@SubContact</a><a class="dropdown-item" href="#">@BuyProductwithpaypal_partnerpanel</a><a class="dropdown-item" href="#">@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger_partnerpanel</a><a class="dropdown-item" href="#">@BuyProductwithbank_partnerpanel</a><a class="dropdown-item" href="#">@create_addon</a><a class="dropdown-item" href="#">@Adding_receipt_to_pay_invoice_paid_by_banking_gateway_partnerpanel</a><a class="dropdown-item" href="#">@Adding_receipt_to_pay_invoice_paid_by_banking_gateway</a><a class="dropdown-item" href="#">@Custom_invoice_partnerpanel</a><a class="dropdown-item" href="#">@Renew_service_with_autorenewal_on</a><a class="dropdown-item" href="#">@create_addon_partnerpanel</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Hosting Buying Linux</p>
+            <p class="text-sm">
+              <span>02:51:58 am</span> / <span>37:46:900</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Hosting Buying Linux</h5>
+<span class='badge badge-success'>03.18.2022 02:51:58</span>
+<span class='badge badge-danger'>03.18.2022 04:59:45</span>
+<span class='badge badge-default'>37:46:900</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Buying Linux Hosting service banking Gateway</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ronald_login_into_Q11_Website()">
+                <span>Given Ronald login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ronald_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Ronald Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ronald_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Ronald open Monthly plan and add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ronald_creates_new_account()">
+                <span>And Ronald creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ronald_pay_it_by_bank_payment()">
+                <span>Then Ronald pay it by bank payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.arthur_view_billing()">
+                <span>And Arthur view Billing</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.arthur_approve_for_product()">
+                <span>Then Arthur Approve for product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.arthur_clicks_on_invoice()">
+                <span>And Arthur clicks on invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.arthur_verifies_the_invoice()">
+                <span>Then Arthur verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.arthur_opens_ronald_profile()">
+                <span>And Arthur opens Ronald profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.arthur_verifies_the_log_and_emails()">
+                <span>Then Arthur verifies the log and emails</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Buying Linux Hosting service paypal Gateway</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ginny_login_into_Q11_website()">
+                <span>Given Ginny login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ginny_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Ginny Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ginny_open_monthly_plan_add_it_to_cart()">
+                <span>When Ginny open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ginny_creates_new_account()">
+                <span>And Ginny creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.ginny_pay_it_by_paypal_payment()">
+                <span>Then Ginny pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.snape_view_billing()">
+                <span>And Snape view Billing</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.snape_verifies_the_invoice()">
+                <span>Then Snape verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="22"><span class="badge log fail-bg mr-2">Fail</span>Customer lending money</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.fred_register_with_q11_website()">
+                <span>Given Fred register with Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.fred_open_his_account_and_add_credit_limit()">
+                <span>Then Fred open his account and add credit limit</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//table[@class='table table-bordered']//a)[1]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55574}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a121e9dfc35e20f98bfb5567141bdf4a
+*** Element info: {Using=xpath, value=(//table[@class='table table-bordered']//a)[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at features.QA11_hostinglinux_adminPanel.fred_open_his_account_and_add_credit_limit(QA11_hostinglinux_adminPanel.java:571)
+	at ?.Fred open his account and add credit limit(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:31)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.fred_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Fred Choose Linux Hosting Gold Offer plan</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.fred_open_monthly_plan_add_it_to_cart()">
+                <span>When Fred open Monthly plan add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.fred_login_with_his_account()">
+                <span>And Fred login with his account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.fred_pay_it_by_credit_payment()">
+                <span>Then Fred pay it by credit payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.mcgonagall_view_billing()">
+                <span>And McGonagall view Billing</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.mcgonagall_verifies_the_invoice()">
+                <span>Then McGonagall verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="31"><span class="badge log fail-bg mr-2">Fail</span>Customer Adding Credit into Account</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.dobby_register_with_q11_website()">
+                <span>Given Dobby register with Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.dobby_open_his_account_and_add_credit_balance()">
+                <span>Then Dobby open his account and add credit balance</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//table[@class='table table-bordered']//a)[1]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55646}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 79e49310c75db9110e1e9c4ac7fa9528
+*** Element info: {Using=xpath, value=(//table[@class='table table-bordered']//a)[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at features.QA11_hostinglinux_adminPanel.dobby_open_his_account_and_add_credit_balance(QA11_hostinglinux_adminPanel.java:856)
+	at ?.Dobby open his account and add credit balance(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:42)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dobby_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Dobby Choose Linux Hosting Gold Offer plan</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dobby_open_monthly_plan_add_it_to_cart()">
+                <span>When Dobby open Monthly plan add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dobby_login_with_his_account()">
+                <span>And Dobby login with his account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dobby_pay_it_by_credit_balance()">
+                <span>Then Dobby pay it by credit balance</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dumbledore_view_billing()">
+                <span>And Dumbledore view Billing</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dumbledore_verifies_the_invoice()">
+                <span>Then Dumbledore verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.dumbledore_checks_the_remaining_credit_balance()">
+                <span>And Dumbledore checks the remaining credit balance</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="41"><span class="badge log fail-bg mr-2">Fail</span>Adding receipt to pay due purchase</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.justin_login_into_q11_website()">
+                <span>Given Justin login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.justin_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Justin Choose Linux Hosting Gold Offer plan</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="nav-link " href="/adminp/product-plan/product-plan-links/MXNycG9Ga1JXblFlYm8rWDZMN25MdVVpR05TUWRET0J4dmgxK1pIWkZZcz0%3D/SThqM3doMHU2S2RyQzlUNHJYOFk4QnR2VHlLd1Nucm5qU0MyZjUyOXpPbz0%3D/di8vVzdQd2lZOEhUVUw3NWVKdmg2cmRaZXpUUVNCMHNLcTVPRGQzMFE0MD0%3D/b25Qa3J3YUZKNll4M3dMNzhuelRuTlhqbER5ZU43Z3pOMmIwYmxoTTVRcz0%3D">...</a> is not clickable at point (130, 461). Other element would receive the click: <div class="modal fade preloader show" id="preloader" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" data-keyboard="false" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=99.0.4844.51)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55720}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4cd62816993680a6ea4cb6b383dd27ae
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at methods.Choosing_hosting_custom_plan.select_hosting_plan_admin_panel(Choosing_hosting_custom_plan.java:96)
+	at features.QA11_hostinglinux_adminPanel.justin_choose_linux_hosting_gold_offer_plan(QA11_hostinglinux_adminPanel.java:1241)
+	at ?.Justin Choose Linux Hosting Gold Offer plan(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:54)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.justin_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Justin open Monthly plan and add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.justin_creates_new_account()">
+                <span>And Justin creates new account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.justin_pay_it_by_bank_payment()">
+                <span>Then Justin pay it by bank payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.oliver_opens_justin_profile()">
+                <span>And Oliver opens Justin Profile</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.oliver_added_receipt_which_is_paid_by_justin()">
+                <span>Then Oliver added receipt which is paid by Justin</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.oliver_approves_for_the_product()">
+                <span>Then Oliver approves for the product</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.oliver_verifies_the_invoice()">
+                <span>And Oliver verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="51"><span class="badge log pass-bg mr-2">Pass</span>Generating Invoice for when AutoRenewal service is off</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.joseph_login_into_q11_website()">
+                <span>Given Joseph login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.joseph_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Joseph Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.joseph_open_monthly_plan_add_it_to_cart()">
+                <span>When Joseph open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.joseph_creates_new_account()">
+                <span>And Joseph creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.joseph_pay_it_by_paypal_payment()">
+                <span>Then Joseph pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.leo_opens_joseph_profile()">
+                <span>And Leo opens Joseph Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.leo_turns_off_joseph_auto_renewal_service_off()">
+                <span>Then Leo turns off Joseph auto renewal service off</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.leo_generates_invoice()">
+                <span>And Leo generates invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.leo_verifies_the_invoice()">
+                <span>Then Leo verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.leo_adds_receipt()">
+                <span>And Leo adds receipt</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.leo_again_verifies_the_invoice()">
+                <span>Then Leo again verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="63"><span class="badge log fail-bg mr-2">Fail</span>Generating Invoice for when AutoRenewal service is on</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.robert_login_into_q11_website()">
+                <span>Given Robert login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.robert_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Robert Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.robert_open_monthly_plan_add_it_to_cart()">
+                <span>When Robert open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.robert_creates_new_account()">
+                <span>And Robert creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.robert_pay_it_by_paypal_payment()">
+                <span>Then Robert pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.victor_opens_robert_profile()">
+                <span>And Victor opens Robert Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.victor_turns_off_robert_auto_renewal_service_on()">
+                <span>Then Victor turns off Robert auto renewal service on</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.victor_generates_invoice()">
+                <span>And Victor generates invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.victor_verifies_the_invoice()">
+                <span>Then Victor verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.victor_adds_receipt()">
+                <span>And Victor adds receipt</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(4)>a>span"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56039}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ac9ed62b0bfe20920dc5f3b178fe700c
+*** Element info: {Using=css selector, value=div#kt_aside_menu>ul>li:nth-of-type(4)>div>ul>li:nth-of-type(4)>a>span}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at features.QA11_hostinglinux_adminPanel.victor_adds_receipt(QA11_hostinglinux_adminPanel.java:2026)
+	at ?.Victor adds receipt(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:88)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.victor_again_verifies_the_invoice()">
+                <span>Then Victor again verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="75"><span class="badge log fail-bg mr-2">Fail</span>Buying Addon Service after purchase</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.mario_login_into_q11_website()">
+                <span>Given Mario login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.mario_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Mario Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.mario_open_monthly_plan_add_it_to_cart()">
+                <span>When Mario open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.mario_creates_new_account()">
+                <span>And Mario creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.mario_pay_it_by_paypal_payment()">
+                <span>Then Mario pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.luigi_opens_mario_profile()">
+                <span>And Luigi opens Mario Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.luigi_adds_addons_to_mario_subscription_plan()">
+                <span>Then Luigi adds Addons to Mario subscription plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.luigi_verifies_generated_order()">
+                <span>And Luigi verifies generated Order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.luigi_adds_receipt()">
+                <span>And Luigi adds receipt</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.luigi_approves_for_the_product()">
+                <span>Then Luigi approves for the product</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="kt-menu__link-text">...</span> is not clickable at point (140, 662). Other element would receive the click: <div class="modal fade preloader show" id="preloader" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" data-keyboard="false" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=99.0.4844.51)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56236}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a21237c758337fae5e83f27014413a97
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at features.QA11_hostinglinux_adminPanel.luigi_approves_for_the_product(QA11_hostinglinux_adminPanel.java:2319)
+	at ?.Luigi approves for the product(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:102)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="86"><span class="badge log pass-bg mr-2">Pass</span>Buying Linux Hosting service paypal Gateway with 3rd Module setting</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.jasper_login_into_q11_website()">
+                <span>Given Jasper login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.jasper_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Jasper Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.jasper_open_monthly_plan_add_it_to_cart()">
+                <span>When Jasper open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.jasper_creates_new_account()">
+                <span>And Jasper creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.jasper_pay_it_by_paypal_payment()">
+                <span>Then Jasper pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.casper_view_billing()">
+                <span>And Casper view Billing</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.casper_approve_for_product()">
+                <span>Then Casper Approve for product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.casper_clicks_on_invoice()">
+                <span>And Casper clicks on invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.casper_verifies_the_invoice()">
+                <span>Then Casper verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="96"><span class="badge log fail-bg mr-2">Fail</span>Customer is adding SubContact and Ordering</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.louis_login_into_q11_website()">
+                <span>Given Louis login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.louis_register_his_account()">
+                <span>Then Louis register his account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.louis_creates_sub_contact()">
+                <span>And Louis creates SubContact</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.louis_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Louis Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.louis_open_monthly_plan_add_it_to_cart()">
+                <span>When Louis open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.louis_login_with_the_sub_contact_account()">
+                <span>And Louis login with the SubContact account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.louis_pay_it_by_paypal()">
+                <span>Then Louis pay it by paypal</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='order-summary']/div[1]/div[2]/div[4]/div[1]/div[3]/div[2]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f745f6966ee76fd9fe1032060b1875c6
+*** Element info: {Using=xpath, value=//div[@id='order-summary']/div[1]/div[2]/div[4]/div[1]/div[3]/div[2]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at methods.After_account_creation.capture_data_after_account_creation_from_admin_panel(After_account_creation.java:362)
+	at features.QA11_hostinglinux_adminPanel.louis_pay_it_by_paypal(QA11_hostinglinux_adminPanel.java:2716)
+	at ?.Louis pay it by paypal(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:124)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.brian_view_billing()">
+                <span>And Brian view Billing</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.brian_verifies_the_invoice()">
+                <span>Then Brian verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="106"><span class="badge log fail-bg mr-2">Fail</span>Cancelling Whole Order</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.shawn_login_into_q11_website()">
+                <span>Given Shawn login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.shawn_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Shawn Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_adminPanel.shawn_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Shawn open Monthly plan and add it to cart</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='price-plans'])[2]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56783}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3833e0fcff0a2d529b4990b7225a2005
+*** Element info: {Using=xpath, value=(//div[@class='price-plans'])[2]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at methods.Order_summary_page.capture_data_from_order_summary_page(Order_summary_page.java:52)
+	at features.QA11_hostinglinux_adminPanel.shawn_open_monthly_plan_and_add_it_to_cart(QA11_hostinglinux_adminPanel.java:2850)
+	at ?.Shawn open Monthly plan and add it to cart(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:132)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.shawn_creates_new_account()">
+                <span>And Shawn creates new account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.shawn_pay_it_by_paypal_payment()">
+                <span>Then Shawn pay it by paypal payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.lucca_view_order()">
+                <span>And Lucca view order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.lucca_cancels_the_whole_order()">
+                <span>Then Lucca cancels the whole order</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.lucca_verifies_the_invoice()">
+                <span>And Lucca verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="115"><span class="badge log fail-bg mr-2">Fail</span>Generating Custom InvoiceS</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Francis login into dQ11 Website</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.francis_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Francis Choose Linux Hosting Gold Offer plan</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.francis_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Francis open Monthly plan and add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.francis_creates_new_account()">
+                <span>And Francis creates new account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.francis_pay_it_by_paypal_payment()">
+                <span>Then Francis pay it by paypal payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.hank_opens_francis_profile()">
+                <span>And Hank opens Francis Profile</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.hank_generates_custom_invoice()">
+                <span>Then Hank Generates custom invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_adminPanel.hank_verifies_the_invoice()">
+                <span>And Hank verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="124"><span class="badge log pass-bg mr-2">Pass</span>this for test purpose</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_adminPanel.is_it_working()">
+                <span>Given is it working</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>Buying Linux Hosting service banking Gateway from Partner panel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.neville_login_into_q11_partner_portal()">
+                <span>Given Neville login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.neville_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Neville Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.neville_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Neville open Monthly plan and add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.neville_creates_new_account()">
+                <span>And Neville creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.neville_pay_it_by_bank_payment()">
+                <span>Then Neville pay it by bank payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.lockhart_view_billing()">
+                <span>And Lockhart view Billing</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.lockhart_approve_for_product()">
+                <span>Then Lockhart Approve for product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.lockhart_clicks_on_invoice()">
+                <span>And Lockhart clicks on invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.lockhart_verifies_the_invoice()">
+                <span>Then Lockhart verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.lockhart_opens_ronald_profile()">
+                <span>And Lockhart opens Ronald profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.lockhart_verifies_the_log_and_emails()">
+                <span>Then Lockhart verifies the log and emails</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="138"><span class="badge log pass-bg mr-2">Pass</span>Buying Linux Hosting service paypal Gateway from Partner panel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hermione_login_into_q11_partner_portal()">
+                <span>Given Hermione login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hermione_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Hermione Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hermione_open_monthly_plan_add_it_to_cart()">
+                <span>When Hermione open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hermione_creates_new_account()">
+                <span>And Hermione creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hermione_pay_it_by_paypal_payment()">
+                <span>Then Hermione pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hagrid_view_billing()">
+                <span>And Hagrid view Billing</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.hagrid_verifies_the_invoice()">
+                <span>Then Hagrid verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="146"><span class="badge log fail-bg mr-2">Fail</span>Customer lending money from partner panel</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.susan_login_into_q11_partner_portal()">
+                <span>Given Susan login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.susan_open_his_account_and_add_credit_limit()">
+                <span>Then Susan open his account and add credit limit</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_partnerPanel.susan_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Susan Choose Linux Hosting Gold Offer plan</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: div#kt_header_menu>ul>li:nth-of-type(8)>a>span (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at features.QA11_hostinglinux_partnerPanel.susan_choose_linux_hosting_gold_offer_plan(QA11_hostinglinux_partnerPanel.java:608)
+	at ?.Susan Choose Linux Hosting Gold Offer plan(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:188)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div#kt_header_menu>ul>li:nth-of-type(8)>a>span"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57279}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e30fbe823afd6ecf320b074b27f7e9b8
+*** Element info: {Using=css selector, value=div#kt_header_menu>ul>li:nth-of-type(8)>a>span}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at features.QA11_hostinglinux_partnerPanel.susan_choose_linux_hosting_gold_offer_plan(QA11_hostinglinux_partnerPanel.java:608)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.susan_open_monthly_plan_add_it_to_cart()">
+                <span>When Susan open Monthly plan add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.susan_login_with_his_account()">
+                <span>And Susan login with his account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.susan_pay_it_by_credit_payment()">
+                <span>Then Susan pay it by credit payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.barty_crouch_view_billing()">
+                <span>And BartyCrouch view Billing</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.barty_crouch_verifies_the_invoice()">
+                <span>Then BartyCrouch verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="155"><span class="badge log fail-bg mr-2">Fail</span>Customer Adding Credit into Account from partner panel</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.harry_login_into_q11_partner_portal()">
+                <span>Given Harry login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_partnerPanel.harry_open_his_account_and_add_credit_balance()">
+                <span>Then Harry open his account and add credit balance</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//table[@class='table table-bordered']//a)[1]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57379}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: da88b4d3f2f8276a05bb4a02c75f3645
+*** Element info: {Using=xpath, value=(//table[@class='table table-bordered']//a)[1]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at features.QA11_hostinglinux_partnerPanel.harry_open_his_account_and_add_credit_balance(QA11_hostinglinux_partnerPanel.java:840)
+	at ?.Harry open his account and add credit balance(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:198)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.harry_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Harry Choose Linux Hosting Gold Offer plan</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.harry_open_monthly_plan_add_it_to_cart()">
+                <span>When Harry open Monthly plan add it to cart</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.harry_login_with_his_account()">
+                <span>And Harry login with his account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.harry_pay_it_by_credit_balance()">
+                <span>Then Harry pay it by credit balance</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.quirrell_view_billing()">
+                <span>And Quirrell view Billing</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.quirrell_verifies_the_invoice()">
+                <span>Then Quirrell verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.quirrell_checks_the_remaining_credit_balance()">
+                <span>And Quirrell checks the remaining credit balance</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="165"><span class="badge log pass-bg mr-2">Pass</span>Buying Linux Hosting service banking Gateway</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.james_login_into_q11_partner_portal()">
+                <span>Given James login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.james_choose_linux_hosting_gold_offer_plan()">
+                <span>Then James Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.james_open_monthly_plan_and_add_it_to_cart()">
+                <span>When James open Monthly plan and add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.james_creates_new_account()">
+                <span>And James creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.james_pay_it_by_bank_payment()">
+                <span>Then James pay it by bank payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.william_opens_justin_profile()">
+                <span>And William opens Justin Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.william_added_receipt_which_is_paid_by_james()">
+                <span>Then William added receipt which is paid by James</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.william_approves_for_the_product()">
+                <span>Then William approves for the product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.william_verifies_the_invoice()">
+                <span>And William verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="175"><span class="badge log pass-bg mr-2">Pass</span>Generating Invoice for when AutoRenewal service is off</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.logan_login_into_q11_partner_portal()">
+                <span>Given Logan login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.logan_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Logan Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.logan_open_monthly_plan_add_it_to_cart()">
+                <span>When Logan open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.logan_creates_new_account()">
+                <span>And Logan creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.logan_pay_it_by_paypal_payment()">
+                <span>Then Logan pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jackson_opens_joseph_profile()">
+                <span>And Jackson opens Joseph Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jackson_turns_off_logan_auto_renewal_service_off()">
+                <span>Then Jackson turns off Logan auto renewal service off</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jackson_generates_invoice()">
+                <span>And Jackson generates invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jackson_verifies_the_invoice()">
+                <span>Then Jackson verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jackson_adds_receipt()">
+                <span>And Jackson adds receipt</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jackson_again_verifies_the_invoice()">
+                <span>Then Jackson again verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="187"><span class="badge log pass-bg mr-2">Pass</span>Generating Invoice for when AutoRenewal service is on</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.luke_login_into_q11_partner_portal()">
+                <span>Given Luke login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.luke_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Luke Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.luke_open_monthly_plan_add_it_to_cart()">
+                <span>When Luke open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.luke_creates_new_account()">
+                <span>And Luke creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.luke_pay_it_by_paypal_payment()">
+                <span>Then Luke pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.isaac_opens_robert_profile()">
+                <span>And Isaac opens Robert Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.isaac_turns_off_luke_auto_renewal_service_on()">
+                <span>Then Isaac turns off Luke auto renewal service on</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.isaac_generates_invoice()">
+                <span>And Isaac generates invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.isaac_verifies_the_invoice()">
+                <span>Then Isaac verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.isaac_adds_receipt()">
+                <span>And Isaac adds receipt</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.isaac_again_verifies_the_invoice()">
+                <span>Then Isaac again verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="199"><span class="badge log fail-bg mr-2">Fail</span>Buying Addon Service after purchase</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.thomas_login_into_q11_partner_portal()">
+                <span>Given Thomas login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.thomas_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Thomas Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.thomas_open_monthly_plan_add_it_to_cart()">
+                <span>When Thomas open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.thomas_creates_new_account()">
+                <span>And Thomas creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.thomas_pay_it_by_paypal_payment()">
+                <span>Then Thomas pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.charles_opens_thomas_profile()">
+                <span>And Charles opens Thomas Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.charles_adds_addons_to_thomas_subscription_plan()">
+                <span>Then Charles adds Addons to Thomas subscription plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.charles_verifies_generated_order()">
+                <span>And Charles verifies generated Order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_partnerPanel.charles_adds_receipt()">
+                <span>And Charles adds receipt</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[contains(.,'has been added successfully.')])[8] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at methods.Receipt.add_receipt(Receipt.java:56)
+	at features.QA11_hostinglinux_partnerPanel.charles_adds_receipt(QA11_hostinglinux_partnerPanel.java:2258)
+	at ?.Charles adds receipt(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:258)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[contains(.,'has been added successfully.')])[8]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58120}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6410e8f8cc0b7a559c9d5234f81c796d
+*** Element info: {Using=xpath, value=(//div[contains(.,'has been added successfully.')])[8]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at methods.Receipt.add_receipt(Receipt.java:56)
+	at features.QA11_hostinglinux_partnerPanel.charles_adds_receipt(QA11_hostinglinux_partnerPanel.java:2258)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.charles_approves_for_the_product()">
+                <span>Then Charles approves for the product</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="210"><span class="badge log fail-bg mr-2">Fail</span>Customer is adding SubContact and Ordering</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.kane_login_into_q11_partner_portal()">
+                <span>Given Kane login into Q11 partner portal</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.kane_register_his_account()">
+                <span>Then Kane register his account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.kane_creates_sub_contact()">
+                <span>And Kane creates SubContact</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.kane_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Kane Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.kane_open_monthly_plan_add_it_to_cart()">
+                <span>When Kane open Monthly plan add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.kane_login_with_the_sub_contact_account()">
+                <span>And Kane login with the SubContact account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_partnerPanel.kane_pay_it_by_paypal()">
+                <span>Then Kane pay it by paypal</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.id: make_payment (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58342}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d62e1d76e46ffadd60ea065611719fae
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at methods.Payments.payment_with_paypal(Payments.java:74)
+	at features.QA11_hostinglinux_partnerPanel.kane_pay_it_by_paypal(QA11_hostinglinux_partnerPanel.java:2484)
+	at ?.Kane pay it by paypal(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:282)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.wade_view_billing()">
+                <span>And Wade view Billing</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_partnerPanel.wade_verifies_the_invoice()">
+                <span>Then Wade verifies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="220"><span class="badge log pass-bg mr-2">Pass</span>Cancelling Whole Order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jerry_login_into_q11_website()">
+                <span>Given Jerry login into Q11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jerry_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Jerry Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jerry_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Jerry open Monthly plan and add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jerry_creates_new_account()">
+                <span>And Jerry creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.jerry_pay_it_by_paypal_payment()">
+                <span>Then Jerry pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.tom_view_order()">
+                <span>And Tom view order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.tom_cancels_the_whole_order()">
+                <span>Then Tom cancels the whole order</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.tom_verifies_the_invoice()">
+                <span>And Tom verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="229"><span class="badge log pass-bg mr-2">Pass</span>Generating Custom InvoiceS</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.dennis_login_into_d_q11_website()">
+                <span>Given Dennis login into dQ11 Website</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.dennis_choose_linux_hosting_gold_offer_plan()">
+                <span>Then Dennis Choose Linux Hosting Gold Offer plan</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.dennis_open_monthly_plan_and_add_it_to_cart()">
+                <span>When Dennis open Monthly plan and add it to cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.dennis_creates_new_account()">
+                <span>And Dennis creates new account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.dennis_pay_it_by_paypal_payment()">
+                <span>Then Dennis pay it by paypal payment</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.cason_opens_francis_profile()">
+                <span>And Cason opens Francis Profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.cason_generates_custom_invoice()">
+                <span>Then Cason Generates custom invoice</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_partnerPanel.cason_verifies_the_invoice()">
+                <span>And Cason verifies the invoice</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="238"><span class="badge log fail-bg mr-2">Fail</span>Renew Service when autorenewable is on</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="features.QA11_hostinglinux_marketplace.ginny_login_into_her_account()">
+                <span>Given Ginny login into her account</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="features.QA11_hostinglinux_marketplace.ginny_view_her_subscription()">
+                <span>Then Ginny view her subscription</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="features.QA11_hostinglinux_marketplace.ginny_turns_on_renewal_service()">
+                <span>And Ginny turns ON renewal service</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //button[contains(@class,'swal2-confirm btn')] (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at methods_for_member_panel.Renewable_on_off.turn_on_renewable(Renewable_on_off.java:41)
+	at features.QA11_hostinglinux_marketplace.ginny_turns_on_renewal_service(QA11_hostinglinux_marketplace.java:66)
+	at ?.Ginny turns ON renewal service(file:///C:/Users/varun/OneDrive%20-%20ZNet%20Technologies%20Private%20Limited/Varun%20Ranjan/Automation/MyFramework/com.hostingq11.jenkins/src/test/resources/QA11_hostinglinux.feature:316)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'swal2-confirm btn')]"}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'VARUN-RANJAN', ip: '172.17.247.92', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\varun\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58963}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 058f92dd1a355e59c03b70bcc05d43f3
+*** Element info: {Using=xpath, value=//button[contains(@class,'swal2-confirm btn')]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor67.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at methods_for_member_panel.Renewable_on_off.turn_on_renewable(Renewable_on_off.java:41)
+	at features.QA11_hostinglinux_marketplace.ginny_turns_on_renewal_service(QA11_hostinglinux_marketplace.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_marketplace.ginny_renew_her_services()">
+                <span>Then Ginny Renew her services</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_marketplace.ginny_again_pay_for_the_service_from_paypal()">
+                <span>And Ginny again pay for the service from Paypal</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="features.QA11_hostinglinux_marketplace.ginny_verfies_the_invoice()">
+                <span>Then Ginny verfies the invoice</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:05:01 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>Then Fred open his account and add credit limit</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer lending money.Then Fred open his account and add credit limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:07:33 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Then Dobby open his account and add credit balance</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer Adding Credit into Account.Then Dobby open his account and add credit balance</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:26:43 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='73'>And Victor adds receipt</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Invoice for when AutoRenewal service is on.And Victor adds receipt</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:46:14 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='103'>Then Louis pay it by paypal</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer is adding SubContact and Ordering.Then Louis pay it by paypal</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:47:42 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='109'>When Shawn open Monthly plan and add it to cart</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Cancelling Whole Order.When Shawn open Monthly plan and add it to cart</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:06:34 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='157'>Then Harry open his account and add credit balance</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer Adding Credit into Account from partner panel.Then Harry open his account and add credit balance</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:10:27 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='43'>Then Justin Choose Linux Hosting Gold Offer plan</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Adding receipt to pay due purchase.Then Justin Choose Linux Hosting Gold Offer plan</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:34:05 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='85'>Then Luigi approves for the product</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Addon Service after purchase.Then Luigi approves for the product</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:04:23 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='149'>Then Susan Choose Linux Hosting Gold Offer plan</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer lending money from partner panel.Then Susan Choose Linux Hosting Gold Offer plan</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:37:01 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='208'>And Charles adds receipt</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Addon Service after purchase.And Charles adds receipt</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:43:29 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='217'>Then Kane pay it by paypal</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer is adding SubContact and Ordering.Then Kane pay it by paypal</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:58:52 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='241'>And Ginny turns ON renewal service</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Renew Service when autorenewable is on.And Ginny turns ON renewal service</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">25</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Generate_Invoice_Renewal_with_autorenewal_on_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Generate_Invoice_Renewal_with_autorenewal_on_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>04:23:03 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='187'>Generating Invoice for when AutoRenewal service is on</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Invoice for when AutoRenewal service is on</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Cancel_Whole_order_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Cancel_Whole_order_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>04:44:01 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='220'>Cancelling Whole Order</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Cancelling Whole Order</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@BuyProductwithbank</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@BuyProductwithbank</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:51:58 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Buying Linux Hosting service banking Gateway</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service banking Gateway</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@test</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@test</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>03:48:25 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='124'>this for test purpose</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.this for test purpose</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@BuyProductwithpaypal</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@BuyProductwithpaypal</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:58:51 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>Buying Linux Hosting service paypal Gateway</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service paypal Gateway</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:07:17 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Customer Adding Credit into Account</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer Adding Credit into Account</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>04:15:20 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='175'>Generating Invoice for when AutoRenewal service is off</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Invoice for when AutoRenewal service is off</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@SubContact_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SubContact_partnerpanel</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:38:02 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='210'>Customer is adding SubContact and Ordering</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer is adding SubContact and Ordering</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@3rd_module_settings</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@3rd_module_settings</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>03:34:06 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Buying Linux Hosting service paypal Gateway with 3rd Module setting</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service paypal Gateway with 3rd Module setting</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Adding_Credit_Limit_In_Customer_Account</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Adding_Credit_Limit_In_Customer_Account</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:04:45 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>Customer lending money</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer lending money</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Adding_Credit_Limit_In_Customer_Account_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Adding_Credit_Limit_In_Customer_Account_partnerpanel</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:01:24 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='146'>Customer lending money from partner panel</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer lending money from partner panel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Cancel_Whole_order</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Cancel_Whole_order</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:46:25 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='106'>Cancelling Whole Order</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Cancelling Whole Order</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Custom_invoice</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Custom_invoice</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:48:25 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='115'>Generating Custom InvoiceS</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Custom InvoiceS</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Generate_Invoice_Renewal_with_autorenewal_off</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Generate_Invoice_Renewal_with_autorenewal_off</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>03:11:21 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='51'>Generating Invoice for when AutoRenewal service is off</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Invoice for when AutoRenewal service is off</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Generate_Invoice_Renewal_with_autorenewal_on</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Generate_Invoice_Renewal_with_autorenewal_on</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:19:37 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='63'>Generating Invoice for when AutoRenewal service is on</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Invoice for when AutoRenewal service is on</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@SubContact</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SubContact</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:40:18 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='96'>Customer is adding SubContact and Ordering</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer is adding SubContact and Ordering</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@BuyProductwithpaypal_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@BuyProductwithpaypal_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>03:55:33 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='138'>Buying Linux Hosting service paypal Gateway from Partner panel</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service paypal Gateway from Partner panel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger_partnerpanel</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:06:18 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='155'>Customer Adding Credit into Account from partner panel</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Customer Adding Credit into Account from partner panel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@BuyProductwithbank_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@BuyProductwithbank_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>03:48:36 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='126'>Buying Linux Hosting service banking Gateway from Partner panel</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service banking Gateway from Partner panel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@create_addon</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@create_addon</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:26:55 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='75'>Buying Addon Service after purchase</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Addon Service after purchase</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Adding_receipt_to_pay_invoice_paid_by_banking_gateway_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Adding_receipt_to_pay_invoice_paid_by_banking_gateway_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>04:08:43 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='165'>Buying Linux Hosting service banking Gateway</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Linux Hosting service banking Gateway</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Adding_receipt_to_pay_invoice_paid_by_banking_gateway</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Adding_receipt_to_pay_invoice_paid_by_banking_gateway</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>03:09:51 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>Adding receipt to pay due purchase</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Adding receipt to pay due purchase</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Custom_invoice_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Custom_invoice_partnerpanel</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>04:51:05 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='229'>Generating Custom InvoiceS</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Generating Custom InvoiceS</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Renew_service_with_autorenewal_on</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Renew_service_with_autorenewal_on</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:58:01 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='238'>Renew Service when autorenewable is on</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Renew Service when autorenewable is on</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@create_addon_partnerpanel</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@create_addon_partnerpanel</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>04:30:33 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='199'>Buying Addon Service after purchase</a>
+<div class="">
+<span class="badge badge-default">Hosting Buying Linux.Buying Addon Service after purchase</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Mar 18, 2022 02:51:56 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Mar 18, 2022 04:59:45 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='48%'><b>12</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='52%'><b>13</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='69%'><b>152</b> steps passed</small></div>
+<div>
+<small data-tooltip='5%'><b>13</b> steps failed,
+<b>53</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Hosting Buying Linux":7666.9
+};
+</script>
+<div class="row">
+<div class="col-md-4 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Generate_Invoice_Renewal_with_autorenewal_on_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Cancel_Whole_order_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@BuyProductwithbank</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@test</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@BuyProductwithpaypal</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Generate_Invoice_Renewal_with_autorenewal_off_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SubContact_partnerpanel</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@3rd_module_settings</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Adding_Credit_Limit_In_Customer_Account</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Adding_Credit_Limit_In_Customer_Account_partnerpanel</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Cancel_Whole_order</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Custom_invoice</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Generate_Invoice_Renewal_with_autorenewal_off</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Generate_Invoice_Renewal_with_autorenewal_on</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@SubContact</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@BuyProductwithpaypal_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Adding_Credit_Balance_in_Customer_Account_and_verify_Ledger_partnerpanel</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@BuyProductwithbank_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@create_addon</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Adding_receipt_to_pay_invoice_paid_by_banking_gateway_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Adding_receipt_to_pay_invoice_paid_by_banking_gateway</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Custom_invoice_partnerpanel</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Renew_service_with_autorenewal_on</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@create_addon_partnerpanel</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 12,
+failChild: 13,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 152,
+failGrandChild: 13,
+warningGrandChild: 0,
+skipGrandChild: 53,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -372,6 +372,8 @@ public class Invoice1 extends BaseClass {
 		FileOutputStream fos = new FileOutputStream(source);
 		wb.write(fos);
 		wb.close();
+		fi.close();
+		fos.close();
 		
 		
 	}
@@ -1121,7 +1123,7 @@ public class Invoice1 extends BaseClass {
 		String Invoice_Due_Date= driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[1]/td[2]")).getText();
 		sheet.getRow(55).createCell(1).setCellValue(Invoice_Due_Date);
 		System.out.println(Invoice_Due_Date);
-		
+																
 		String Invoice_Unpaid= driver.findElement(By.xpath("(//table[@class='invoice']//table)[4]/tbody[1]/tr[2]/td[1]/b[1]")).getText();
 		sheet.getRow(53).createCell(2).setCellValue(Invoice_Unpaid);
 		System.out.println(Invoice_Unpaid);
@@ -1132,7 +1134,7 @@ public class Invoice1 extends BaseClass {
 		XSSFRow row_Invoice_Goods_description_addon = sheet.getRow(62);
 		XSSFRow row_Invoice_Goods_description_addon2 = sheet.getRow(63);
 
-																			
+																													
 		String Invoice_Goods_description_Linux= driver.findElement(By.xpath("(//table[@class='invoice']//table)[7]/tbody[1]/tr[2]/td[2]")).getText();
 		row_Invoice_Goods_description_Linux.createCell(1).setCellValue(Invoice_Goods_description_Linux);
 
@@ -1446,6 +1448,8 @@ public class Invoice1 extends BaseClass {
 		FileOutputStream fos = new FileOutputStream(source);
 		wb.write(fos);
 		wb.close();
+		fi.close();
+		fos.close();
 
 	}
 	

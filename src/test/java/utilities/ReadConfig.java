@@ -95,9 +95,26 @@ public class ReadConfig {
 		String getmemberurl =pro.getProperty("baseUrl_member");
 		return getmemberurl;
 	}
+	public String openmember_partnerURL()
+	{ 
+		String getmemberurl =pro.getProperty("baseUrl_member_partner");
+		return getmemberurl;
+	}
 	
 /*********************** END ************************************/
 	
+	
+	
+	
+/*************** FOR  Q11_MARKETPLACE OPENING *****************/
+	
+	public String openmarketURL()
+	{ 
+		String getmarketurl =pro.getProperty("baseUrl_marketplace");
+		return getmarketurl;
+	}
+	
+/*********************** END ************************************/
 	
 	
 	
@@ -304,6 +321,97 @@ public class ReadConfig {
 	public String get_scPincode_number()
 	{ 
 		String Pincode =pro.getProperty("scpincode");
+		return Pincode;
+	}
+
+/*********************** END ************************************/
+	
+	
+	
+	
+/************************ FOR SUBUSER  **************************/
+	
+	//SUUsername
+	public String get_suusername()
+	{ 
+	String Username =pro.getProperty("suusername");
+	return Username;
+	}
+
+	//Firstname
+	public String get_suFirst_name()
+	{ 
+		String firstname =pro.getProperty("sufirst_name");
+		return firstname;
+	}
+	
+	//Lastname
+	public String get_suLast_name()
+	{
+		String lastname =pro.getProperty("sulast_name");
+		return lastname;
+	}
+	
+	//Email
+	public String get_suemail()
+	{ 
+		String Email =pro.getProperty("suemail");
+		return Email;
+	}
+		
+	//Company name
+	public String get_suCompany_name()
+	{
+		String companyname =pro.getProperty("sucompany_name");
+		return companyname;
+	}
+	
+	//Address 
+	public String get_suAddress1()
+	{
+		String Address1 =pro.getProperty("suaddress1");
+		return Address1;
+	}
+	
+	//Country
+	public String get_suCountry_name()
+	{ 
+		String Country =pro.getProperty("sucountry");
+		return Country;
+	}
+	
+	//State
+	public String get_suState_name()
+	{ 
+		String State =pro.getProperty("sustate");
+		return State;
+	}
+	
+	//city
+	public String get_suCity_name()
+	{ 
+		String City =pro.getProperty("sucity");
+		return City;
+	}
+	
+	//Mobile Number
+	public String get_suMobile_number()
+		{ 
+			String mobile =pro.getProperty("sumobile_number");
+			return mobile;
+		}
+	
+	//Phone Number
+	public String get_suPhone_number()
+	{ 
+		String phone =pro.getProperty("suphone_number");
+		return phone;
+	}
+	
+	//Pincode
+	public String get_suPincode_number()
+	{ 
+		String Pincode =pro.getProperty("supincode");
 		return Pincode;
 	}
 

@@ -51,42 +51,42 @@ public class Switch_tab extends BaseClass {
 	}
 	
 	
-	public static WebDriver switch_back_the_tab(WebDriver driver)
-	{
-		
-		String parentId = driver.getWindowHandle();
-		System.out.println(parentId);
-
-
-		Set<String> allWindowHandles = driver.getWindowHandles();
-
-		System.out.println(allWindowHandles);
-
-		int count =1 ;
-		for(String window: allWindowHandles)
-		{
-			System.out.println(count + ":" + window);
-			count++;
-		}
-
-		try {
-			Thread.sleep(3000);
-
-			for(String window : allWindowHandles)
-			{
-				driver.switchTo().window(parentId);
-			}
-
-		}
-		catch(Exception x)
-		{
-			x.printStackTrace();
-		}
+//	public static WebDriver switch_back_the_tab(WebDriver driver)
+//	{
+//		///////Not working need to fix it use switch_previous_tab2 
+//		String parentId = driver.getWindowHandle();
+//		System.out.println(parentId);
+//
+//
+//		Set<String> allWindowHandles = driver.getWindowHandles();
+//
+//		System.out.println(allWindowHandles);
+//
+//		int count =1 ;
+//		for(String window: allWindowHandles)
+//		{
+//			System.out.println(count + ":" + window);
+//			count++;
+//		}
+//
+//		try {
+//			Thread.sleep(3000);
+//
+//			for(String window : allWindowHandles)
+//			{
+//				driver.switchTo().window(parentId);
+//			}
+//
+//		}
+//		catch(Exception x)
+//		{
+//			x.printStackTrace();
+//		}
+////		
+//		driver.switchTo().window(parentId);
+//		return driver;
 //		
-		driver.switchTo().window(parentId);
-		return driver;
-		
-	}
+//	}
 	
 	
 	public static WebDriver switch_next_tab2 (WebDriver driver)

@@ -103,7 +103,7 @@ public class Receipt extends BaseClass{
 		
 //		driver.close();
 		
-		Switch_tab.switch_back_the_tab(driver);
+		Switch_tab.switch_previous_tab2(driver);
 		
 		driver.navigate().refresh();
 		
